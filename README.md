@@ -1,5 +1,6 @@
+cat << 'EOF' > README.md
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=3776AB&height=200&section=header&text=Md%20Shoaib%20Mahmud&fontSize=50" />
+  <img src="https://capsule-render.vercel.app/render?type=waving&color=3776AB&height=200&section=header&text=Md%20Shoaib%20Mahmud&fontSize=50&cb=20260425" />
 </p>
 
 <p align="center">
@@ -45,3 +46,4 @@
 * Mastering advanced memory management and pointer logic in C.
 * Developing native Linux utilities that interface directly with hardware.
 * Exploring system-level automation for Debian-based distributions.
+EOF
