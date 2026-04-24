@@ -1,16 +1,14 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=Md%20Shoaib%20Mahmud&fontSize=50&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/render?type=waving&color=3776AB&height=200&section=header&text=Md%20Shoaib%20Mahmud&fontSize=50&animation=fadeIn" />
 </p>
 
 <p align="center">
-  <strong>CSE Student @ Uttara University</strong><br>
-  <em>Building Low-Level Systems & Automation Tools</em>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=3776AB&center=true&vCenter=true&width=500&lines=CSE+Student+@+Uttara+University;Building+Low-Level+Systems;Linux+Automation+Engineer;Mastering+C+Memory+Management" alt="Typing SVG" />
 </p>
 
 <p align="center">
   <a href="https://shoaib.yzz.me">🌐 Personal Website</a> •
-  <a href="mailto:shoaibxbd@gmail.com">📧 Email Me</a> •
-  <a href="https://www.linkedin.com/in/mrshoaibxbd">🔗 LinkedIn</a>
+  <a href="mailto:shoaibxbd@gmail.com">📧 Email Me</a>
 </p>
 
 ---
@@ -44,6 +42,6 @@
 ---
 
 ### 🌱 Current Focus
-- Mastering advanced memory management and pointer logic in C.
-- Developing native Linux utilities that interface directly with hardware.
-- Exploring system-level automation for Debian-based distributions.
+* Mastering advanced memory management and pointer logic in C.
+* Developing native Linux utilities that interface directly with hardware.
+* Exploring system-level automation for Debian-based distributions.
