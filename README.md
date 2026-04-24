@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=3776AB&height=200&section=header&text=Md%20Shoaib%20Mahmud&fontSize=50&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/render?type=waving&color=3776AB&height=200&section=header&text=Md%20Shoaib%20Mahmud&fontSize=50" />
 </p>
 
 <p align="center">
