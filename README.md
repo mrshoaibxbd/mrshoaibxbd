@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/developer-room-banner.png" alt="Md Shoaib Mahmud — Linux developer workspace" width="100%">
+  <img src="assets/developer-room-banner.gif" alt="Md Shoaib Mahmud — Linux developer workspace" width="100%">
 </p>
 
 <h1 align="center">Md Shoaib Mahmud</h1>
