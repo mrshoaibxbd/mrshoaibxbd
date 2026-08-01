@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/developer-room-banner.gif" alt="Md Shoaib Mahmud — Linux developer workspace" width="100%">
+  <img src="https://cdn.jsdelivr.net/gh/ViratiAkiraNandhanReddy/pixel-art-readme-gifs@v1.0.0/gifs/hrzn/ad036dee-2f56-4b3a-854f-e2ace16e819d.gif" width="100%" alt="Animated pixel-art programmer workspace">
 </p>
 
 <h1 align="center">Md Shoaib Mahmud</h1>
