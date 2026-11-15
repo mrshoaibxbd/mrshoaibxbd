@@ -1,0 +1,484 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 310" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Deep Dark Mode Card Surfaces -->
+    <linearGradient id="card-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#080C14" />
+    </linearGradient>
+
+    <linearGradient id="header-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#182236" />
+      <stop offset="100%" stop-color="#0E1422" />
+    </linearGradient>
+
+    <linearGradient id="tile-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#172035" />
+      <stop offset="100%" stop-color="#0D1320" />
+    </linearGradient>
+
+    <!-- Rim & Traveling Border Beam Gradients -->
+    <linearGradient id="rim-base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18" />
+      <stop offset="50%" stop-color="#64748B" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.20" />
+    </linearGradient>
+
+    <linearGradient id="beam-cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="beam-violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0" />
+      <stop offset="50%" stop-color="#34D399" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Ambient Internal Card Glows -->
+    <radialGradient id="orb-cyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="orb-purple" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Usage Bar Gradients -->
+    <linearGradient id="bar-cpu" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <linearGradient id="bar-ram" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <linearGradient id="bar-disk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+
+    <linearGradient id="bar-swap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+
+    <!-- Bar Sheen & Scanline -->
+    <linearGradient id="bar-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="scan-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Avatar Gradients -->
+    <linearGradient id="avatar-ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+
+    <linearGradient id="avatar-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0B1120" />
+    </linearGradient>
+
+    <!-- Card Clip Paths -->
+    <clipPath id="clip-c1">
+      <rect x="14" y="14" width="496" height="282" rx="18" />
+    </clipPath>
+    <clipPath id="clip-c2">
+      <rect x="528" y="14" width="352" height="282" rx="18" />
+    </clipPath>
+    <clipPath id="clip-c3">
+      <rect x="898" y="14" width="328" height="282" rx="18" />
+    </clipPath>
+
+    <!-- SMIL Typewriter Clip Paths (100% Cross-Browser Supported) -->
+    <clipPath id="type-clip-1">
+      <rect x="54" y="66" width="0" height="24">
+        <animate attributeName="width" values="0;0;150;150;0" keyTimes="0;0.03;0.14;0.92;1" dur="9s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="type-clip-2">
+      <rect x="54" y="120" width="0" height="24">
+        <animate attributeName="width" values="0;0;230;230;0" keyTimes="0;0.20;0.34;0.92;1" dur="9s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="type-clip-3">
+      <rect x="54" y="176" width="0" height="24">
+        <animate attributeName="width" values="0;0;210;210;0" keyTimes="0;0.54;0.68;0.92;1" dur="9s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Bar Track Clip Paths -->
+    <clipPath id="track-clip-1">
+      <rect x="554" y="102" width="300" height="9" rx="4.5" />
+    </clipPath>
+    <clipPath id="track-clip-2">
+      <rect x="554" y="150" width="300" height="9" rx="4.5" />
+    </clipPath>
+    <clipPath id="track-clip-3">
+      <rect x="554" y="198" width="300" height="9" rx="4.5" />
+    </clipPath>
+    <clipPath id="track-clip-4">
+      <rect x="554" y="246" width="300" height="9" rx="4.5" />
+    </clipPath>
+
+    <!-- Standard SVG 1.1 Glow Filter -->
+    <filter id="neon-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========================================================= -->
+  <!-- CARD 1: TERMINAL                                          -->
+  <!-- ========================================================= -->
+  <g id="card-terminal">
+    <!-- Layered Soft Drop Shadow (No feDropShadow dependency) -->
+    <rect x="14" y="19" width="496" height="282" rx="18" fill="#000000" fill-opacity="0.35" />
+    <rect x="14" y="16" width="496" height="282" rx="18" fill="#000000" fill-opacity="0.25" />
+
+    <g clip-path="url(#clip-c1)">
+      <rect x="14" y="14" width="496" height="282" fill="url(#card-bg)" />
+      <!-- Ambient Internal Orb -->
+      <circle cx="130" cy="110" r="140" fill="url(#orb-cyan)">
+        <animate attributeName="cx" values="120;155;120" dur="7s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="105;135;105" dur="7s" repeatCount="indefinite" />
+      </circle>
+      <!-- Scanline Sweep -->
+      <rect x="14" y="40" width="496" height="36" fill="url(#scan-grad)" opacity="0">
+        <animate attributeName="y" values="40;280" dur="5.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="5.5s" repeatCount="indefinite" />
+      </rect>
+      <!-- Header -->
+      <rect x="14" y="14" width="496" height="40" fill="url(#header-bg)" />
+      <line x1="14" y1="54" x2="510" y2="54" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1" />
+    </g>
+
+    <!-- Base Rim + Traveling Energy Beam -->
+    <rect x="14.65" y="14.65" width="494.7" height="280.7" rx="17.35" stroke="url(#rim-base)" stroke-width="1.3" />
+    <rect x="14.65" y="14.65" width="494.7" height="280.7" rx="17.35" stroke="url(#beam-cyan)" stroke-width="1.8" stroke-dasharray="180 1320">
+      <animate attributeName="stroke-dashoffset" from="1500" to="0" dur="6s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Window Controls -->
+    <circle cx="38" cy="34" r="5" fill="#FF5F56" />
+    <circle cx="55" cy="34" r="5" fill="#FFBD2E" />
+    <circle cx="72" cy="34" r="5" fill="#27C93F" />
+    <text x="262" y="38.5" text-anchor="middle" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500">shoaib@debian — zsh</text>
+
+    <!-- Terminal Lines -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">
+      <!-- Command 1 -->
+      <text x="36" y="84" fill="#38BDF8" font-weight="700">❯</text>
+      <g clip-path="url(#type-clip-1)">
+        <text x="54" y="84" fill="#F1F5F9">uname -srm</text>
+      </g>
+
+      <!-- Output 1 -->
+      <text x="54" y="106" fill="#94A3B8" opacity="0">
+        Linux 6.12.0-amd64 x86_64
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.14;0.18;0.92;1" dur="9s" repeatCount="indefinite" />
+      </text>
+
+      <!-- Command 2 -->
+      <text x="36" y="138" fill="#38BDF8" font-weight="700">❯</text>
+      <g clip-path="url(#type-clip-2)">
+        <text x="54" y="138" fill="#F1F5F9">go test ./internal/...</text>
+      </g>
+
+      <!-- Running Spinner (34% -> 48%) -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.34;0.36;0.47;0.49;1" dur="9s" repeatCount="indefinite" />
+        <circle cx="62" cy="157" r="6" stroke="#38BDF8" stroke-width="2" stroke-dasharray="22 14" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" from="0 62 157" to="360 62 157" dur="0.7s" repeatCount="indefinite" />
+        </circle>
+        <text x="76" y="161" fill="#64748B" font-size="11.5">running suites...</text>
+      </g>
+
+      <!-- PASS Badge (48% -> 92%) -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.48;0.51;0.92;1" dur="9s" repeatCount="indefinite" />
+        <rect x="54" y="148" width="46" height="18" rx="4" fill="#34D399" fill-opacity="0.18" stroke="#34D399" stroke-opacity="0.4" stroke-width="0.9" />
+        <text x="77" y="160.5" text-anchor="middle" fill="#34D399" font-size="11" font-weight="700">PASS</text>
+        <text x="110" y="161" fill="#CBD5E1">14/14 suites</text>
+        <text x="220" y="161" fill="#64748B">(0.18s)</text>
+      </g>
+
+      <!-- Command 3 -->
+      <text x="36" y="194" fill="#38BDF8" font-weight="700">❯</text>
+      <g clip-path="url(#type-clip-3)">
+        <text x="54" y="194" fill="#A78BFA">git <tspan fill="#F1F5F9">push origin main</tspan></text>
+      </g>
+
+      <!-- Active Ready Prompt + Blinking Neon Cursor -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.69;0.73;0.92;1" dur="9s" repeatCount="indefinite" />
+        <text x="36" y="228" fill="#34D399" font-weight="700">❯</text>
+        <text x="54" y="228" fill="#94A3B8">ready</text>
+        <rect x="102" y="215" width="8.5" height="16" rx="1.5" fill="#38BDF8" filter="url(#neon-glow)">
+          <animate attributeName="opacity" values="1;1;0.12;0.12;1" keyTimes="0;0.49;0.50;0.99;1" dur="0.95s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    </g>
+
+    <!-- Bottom Terminal Status Bar -->
+    <line x1="36" y1="256" x2="488" y2="256" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1" />
+    <text x="36" y="276" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">● main</text>
+    <text x="262" y="276" text-anchor="middle" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">✓ synced</text>
+    <text x="488" y="276" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">UTF-8</text>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- CARD 2: SYSTEM LOAD (Numbers + Animated Bars)             -->
+  <!-- ========================================================= -->
+  <g id="card-system">
+    <!-- Soft Drop Shadow -->
+    <rect x="528" y="19" width="352" height="282" rx="18" fill="#000000" fill-opacity="0.35" />
+    <rect x="528" y="16" width="352" height="282" rx="18" fill="#000000" fill-opacity="0.25" />
+
+    <g clip-path="url(#clip-c2)">
+      <rect x="528" y="14" width="352" height="282" fill="url(#card-bg)" />
+      <circle cx="760" cy="140" r="145" fill="url(#orb-purple)">
+        <animate attributeName="cx" values="765;735;765" dur="8.5s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="145;120;145" dur="8.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Base Rim + Traveling Energy Beam -->
+    <rect x="528.65" y="14.65" width="350.7" height="280.7" rx="17.35" stroke="url(#rim-base)" stroke-width="1.3" />
+    <rect x="528.65" y="14.65" width="350.7" height="280.7" rx="17.35" stroke="url(#beam-violet)" stroke-width="1.8" stroke-dasharray="180 1320">
+      <animate attributeName="stroke-dashoffset" from="1000" to="-500" dur="6s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Header -->
+    <text x="554" y="49" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Inter, sans-serif" font-size="13" font-weight="700" letter-spacing="1">SYSTEM LOAD</text>
+
+    <!-- Live Pill -->
+    <rect x="782" y="34" width="72" height="23" rx="11.5" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.32" stroke-width="1" />
+    <circle cx="842" cy="45.5" r="3.5" fill="#34D399">
+      <animate attributeName="r" values="3.5;9" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.85;0" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="842" cy="45.5" r="3.2" fill="#34D399" />
+    <text x="809" y="49.5" text-anchor="middle" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="700">LIVE</text>
+
+    <line x1="554" y1="68" x2="854" y2="68" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1" />
+
+    <!-- Metric 1: CPU -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+      <text x="554" y="94" fill="#94A3B8" font-size="11.5" font-weight="600">CPU</text>
+      <text x="614" y="94" fill="#64748B" font-size="11">8 Cores • 2.40 GHz</text>
+      <text x="854" y="94" text-anchor="end" fill="#F8FAFC" font-size="13" font-weight="700">
+        34.0%
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.38;0.48;0.88;1" dur="5s" repeatCount="indefinite" />
+      </text>
+      <text x="854" y="94" text-anchor="end" fill="#C084FC" font-size="13" font-weight="700" opacity="0">
+        52.6%
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.38;0.48;0.88;1" dur="5s" repeatCount="indefinite" />
+      </text>
+
+      <rect x="554" y="102" width="300" height="9" rx="4.5" fill="#1E293B" />
+      <g clip-path="url(#track-clip-1)">
+        <rect x="554" y="102" width="102" height="9" rx="4.5" fill="url(#bar-cpu)">
+          <animate attributeName="width" values="102;158;102" dur="5s" repeatCount="indefinite" />
+        </rect>
+        <rect x="480" y="102" width="70" height="9" fill="url(#bar-sheen)">
+          <animate attributeName="x" values="480;860" dur="3.2s" repeatCount="indefinite" />
+        </rect>
+      </g>
+      <circle cx="656" cy="106.5" r="4" fill="#E9D5FF" filter="url(#neon-glow)">
+        <animate attributeName="cx" values="656;712;656" dur="5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Metric 2: RAM -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+      <text x="554" y="142" fill="#94A3B8" font-size="11.5" font-weight="600">RAM</text>
+      <text x="614" y="142" fill="#64748B" font-size="11">
+        9.5 / 16.0 GB
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.38;0.48;0.88;1" dur="6.4s" repeatCount="indefinite" />
+      </text>
+      <text x="614" y="142" fill="#64748B" font-size="11" opacity="0">
+        11.1 / 16.0 GB
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.38;0.48;0.88;1" dur="6.4s" repeatCount="indefinite" />
+      </text>
+      <text x="854" y="142" text-anchor="end" fill="#38BDF8" font-size="13" font-weight="700">
+        59.3%
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.38;0.48;0.88;1" dur="6.4s" repeatCount="indefinite" />
+      </text>
+      <text x="854" y="142" text-anchor="end" fill="#7DD3FC" font-size="13" font-weight="700" opacity="0">
+        69.4%
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.38;0.48;0.88;1" dur="6.4s" repeatCount="indefinite" />
+      </text>
+
+      <rect x="554" y="150" width="300" height="9" rx="4.5" fill="#1E293B" />
+      <g clip-path="url(#track-clip-2)">
+        <rect x="554" y="150" width="178" height="9" rx="4.5" fill="url(#bar-ram)">
+          <animate attributeName="width" values="178;208;178" dur="6.4s" repeatCount="indefinite" />
+        </rect>
+        <rect x="480" y="150" width="70" height="9" fill="url(#bar-sheen)">
+          <animate attributeName="x" values="480;860" begin="0.8s" dur="3.2s" repeatCount="indefinite" />
+        </rect>
+      </g>
+      <circle cx="732" cy="154.5" r="4" fill="#BAE6FD" filter="url(#neon-glow)">
+        <animate attributeName="cx" values="732;762;732" dur="6.4s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Metric 3: NVMe -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+      <text x="554" y="190" fill="#94A3B8" font-size="11.5" font-weight="600">NVMe</text>
+      <text x="614" y="190" fill="#64748B" font-size="11">236 / 512 GB</text>
+      <text x="854" y="190" text-anchor="end" fill="#34D399" font-size="13" font-weight="700">46.1%</text>
+
+      <rect x="554" y="198" width="300" height="9" rx="4.5" fill="#1E293B" />
+      <g clip-path="url(#track-clip-3)">
+        <rect x="554" y="198" width="138" height="9" rx="4.5" fill="url(#bar-disk)">
+          <animate attributeName="width" values="138;146;138" dur="8s" repeatCount="indefinite" />
+        </rect>
+        <rect x="480" y="198" width="70" height="9" fill="url(#bar-sheen)">
+          <animate attributeName="x" values="480;860" begin="1.6s" dur="3.2s" repeatCount="indefinite" />
+        </rect>
+      </g>
+      <circle cx="692" cy="202.5" r="4" fill="#A7F3D0" filter="url(#neon-glow)">
+        <animate attributeName="cx" values="692;700;692" dur="8s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Metric 4: SWAP -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+      <text x="554" y="238" fill="#94A3B8" font-size="11.5" font-weight="600">SWAP</text>
+      <text x="614" y="238" fill="#64748B" font-size="11">
+        0.7 / 4.0 GB
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.38;0.48;0.88;1" dur="5.6s" repeatCount="indefinite" />
+      </text>
+      <text x="614" y="238" fill="#64748B" font-size="11" opacity="0">
+        1.2 / 4.0 GB
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.38;0.48;0.88;1" dur="5.6s" repeatCount="indefinite" />
+      </text>
+      <text x="854" y="238" text-anchor="end" fill="#FBBF24" font-size="13" font-weight="700">
+        18.0%
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.38;0.48;0.88;1" dur="5.6s" repeatCount="indefinite" />
+      </text>
+      <text x="854" y="238" text-anchor="end" fill="#FDE68A" font-size="13" font-weight="700" opacity="0">
+        29.3%
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.38;0.48;0.88;1" dur="5.6s" repeatCount="indefinite" />
+      </text>
+
+      <rect x="554" y="246" width="300" height="9" rx="4.5" fill="#1E293B" />
+      <g clip-path="url(#track-clip-4)">
+        <rect x="554" y="246" width="54" height="9" rx="4.5" fill="url(#bar-swap)">
+          <animate attributeName="width" values="54;88;54" dur="5.6s" repeatCount="indefinite" />
+        </rect>
+        <rect x="480" y="246" width="70" height="9" fill="url(#bar-sheen)">
+          <animate attributeName="x" values="480;860" begin="2.4s" dur="3.2s" repeatCount="indefinite" />
+        </rect>
+      </g>
+      <circle cx="608" cy="250.5" r="4" fill="#FEF3C7" filter="url(#neon-glow)">
+        <animate attributeName="cx" values="608;642;608" dur="5.6s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Footer Load Avg -->
+    <text x="554" y="278" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5">LOAD AVG: 0.84, 0.72, 0.65</text>
+    <text x="854" y="278" text-anchor="end" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600">46°C</text>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- CARD 3: USER CARD                                         -->
+  <!-- ========================================================= -->
+  <g id="card-user">
+    <!-- Soft Drop Shadow -->
+    <rect x="898" y="19" width="328" height="282" rx="18" fill="#000000" fill-opacity="0.35" />
+    <rect x="898" y="16" width="328" height="282" rx="18" fill="#000000" fill-opacity="0.25" />
+
+    <g clip-path="url(#clip-c3)">
+      <rect x="898" y="14" width="328" height="282" fill="url(#card-bg)" />
+      <circle cx="1120" cy="80" r="130" fill="url(#orb-cyan)">
+        <animate attributeName="cx" values="1110;1145;1110" dur="7s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="75;105;75" dur="7s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Base Rim + Traveling Energy Beam -->
+    <rect x="898.65" y="14.65" width="326.7" height="280.7" rx="17.35" stroke="url(#rim-base)" stroke-width="1.3" />
+    <rect x="898.65" y="14.65" width="326.7" height="280.7" rx="17.35" stroke="url(#beam-cyan)" stroke-width="1.8" stroke-dasharray="180 1320">
+      <animate attributeName="stroke-dashoffset" from="500" to="-1000" dur="6s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Profile Avatar with Rotating Halo & Orbiting Spark -->
+    <g transform="translate(924, 42)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 33 33" to="360 33 33" dur="9s" repeatCount="indefinite" />
+        <circle cx="33" cy="33" r="33" fill="url(#avatar-ring)" />
+        <circle cx="33" cy="1.5" r="3.2" fill="#FFFFFF" filter="url(#neon-glow)" />
+      </g>
+      <circle cx="33" cy="33" r="30.2" fill="url(#avatar-fill)" />
+      <!-- Crisp Geometric 'S' Monogram -->
+      <path d="M 40 24.5 C 40 21.8 37 20.5 33 20.5 C 28.8 20.5 26 22.3 26 25.2 C 26 28.3 29 29.5 33.5 30.4 C 38.2 31.4 41.2 33.1 41.2 36.8 C 41.2 40.7 37.8 43.3 32.8 43.3 C 28.2 43.3 25 41.1 25 37.9" stroke="#F8FAFC" stroke-width="3.6" stroke-linecap="round" />
+    </g>
+
+    <!-- Online Pulse Dot -->
+    <circle cx="974" cy="104" r="5" fill="#34D399">
+      <animate attributeName="r" values="5;13" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.9;0" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="974" cy="104" r="6.5" fill="#080C14" />
+    <circle cx="974" cy="104" r="4.5" fill="#34D399" />
+
+    <!-- Name, Handle & Role -->
+    <text x="1006" y="68" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Inter, sans-serif" font-size="19" font-weight="700">Shoaib</text>
+    <text x="1006" y="89" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12.5" font-weight="500">@shoaib</text>
+
+    <rect x="1006" y="99" width="144" height="22" rx="6" fill="#1E293B" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
+    <text x="1078" y="113.5" text-anchor="middle" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Inter, sans-serif" font-size="11" font-weight="500">Software Engineer</text>
+
+    <!-- Divider -->
+    <line x1="924" y1="142" x2="1200" y2="142" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1" />
+
+    <!-- 3 Staggered Levitating Stat Tiles -->
+    <g transform="translate(924, 160)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3.5; 0,0" dur="4.5s" repeatCount="indefinite" />
+        <rect x="0" y="0" width="86" height="80" rx="12" fill="url(#tile-bg)" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1" />
+        <text x="43" y="29" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="0.8">SYSTEM</text>
+        <text x="43" y="54" text-anchor="middle" fill="#F1F5F9" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Inter, sans-serif" font-size="13.5" font-weight="700">Debian</text>
+      </g>
+
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3.5; 0,0" begin="0.6s" dur="4.5s" repeatCount="indefinite" />
+        <rect x="95" y="0" width="86" height="80" rx="12" fill="url(#tile-bg)" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1" />
+        <text x="138" y="29" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="0.8">FOCUS</text>
+        <text x="138" y="54" text-anchor="middle" fill="#C084FC" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Inter, sans-serif" font-size="13.5" font-weight="700">Systems</text>
+      </g>
+
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3.5; 0,0" begin="1.2s" dur="4.5s" repeatCount="indefinite" />
+        <rect x="190" y="0" width="86" height="80" rx="12" fill="url(#tile-bg)" stroke="#34D399" stroke-opacity="0.22" stroke-width="1" />
+        <text x="233" y="29" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="0.8">STATUS</text>
+        <text x="233" y="54" text-anchor="middle" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700">ONLINE</text>
+      </g>
+    </g>
+
+    <!-- Bottom Tag Strip -->
+    <text x="924" y="276" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">C++ • Go • Linux • Bash</text>
+    <text x="1200" y="276" text-anchor="end" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">UTC+6</text>
+  </g>
+</svg>

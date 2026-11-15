@@ -1,25 +1,25 @@
 <div align="center">
 
-  <img src="assets/hero-coding.svg" width="100%" alt="Shoaib coding at his workstation">
+  <img src="assets/hero.svg" width="100%" alt="Shoaib Mahmud — Developer Profile">
 
   <h1>Md Shoaib Mahmud</h1>
 
-  <h3>Computer Science & Engineering Student · Linux Enthusiast · Systems Developer</h3>
-
   <p>
-    <a href="https://shoaib.tech">
-      <img src="https://img.shields.io/badge/Website-shoaib.tech-8B5CF6?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Website">
-    </a>
-    <a href="mailto:shoaibxbd@gmail.com">
-      <img src="https://img.shields.io/badge/Email-Contact%20Me-6D28D9?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-    </a>
-    <a href="https://github.com/mrshoaibxbd">
-      <img src="https://img.shields.io/badge/GitHub-My%20Repositories-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-    </a>
+    <strong>Computer Science & Engineering Student</strong>
+    <br>
+    Linux Enthusiast · Systems Developer · Software Engineer
   </p>
 
   <p>
-    <img src="https://komarev.com/ghpvc/?username=mrshoaibxbd&label=Profile%20Views&color=8B5CF6&style=flat-square" alt="Profile views">
+    <a href="https://shoaib.tech">
+      <img src="https://img.shields.io/badge/Website-shoaib.tech-8B5CF6?style=flat-square&logo=firefoxbrowser&logoColor=white" alt="Website">
+    </a>
+    <a href="mailto:shoaibxbd@gmail.com">
+      <img src="https://img.shields.io/badge/Email-Contact%20Me-6366F1?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+    </a>
+    <a href="https://github.com/mrshoaibxbd">
+      <img src="https://img.shields.io/badge/GitHub-mrshoaibxbd-242938?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+    </a>
   </p>
 
 </div>
@@ -28,117 +28,98 @@
 
 ## About Me
 
-<img src="assets/linux-engineering.svg" width="100%" alt="Linux systems engineering illustration">
+<img src="assets/workspace.svg" width="100%" alt="Developer workspace">
 
-I'm a Computer Science and Engineering student interested in understanding how software and operating systems work beneath the surface.
+I'm a Computer Science and Engineering student with a strong interest in Linux, software development, and understanding how computer systems work.
 
-I enjoy exploring Linux, developing system utilities, building desktop applications, automating repetitive tasks, and turning practical ideas into useful software.
+I enjoy exploring the Linux ecosystem, developing useful utilities, building native desktop applications, and automating everyday tasks.
 
-I believe in learning by building, experimenting, debugging, and continuously improving.
+I believe in learning by building, experimenting with ideas, and continuously improving the things I create.
 
-**Currently interested in:**
-- Linux systems and software development.
-- C and Go programming.
-- Native Linux desktop application development.
-- Automation and command-line utilities.
-- Software architecture and open-source development.
+**My interests**
+- Linux and system-level development
+- Native desktop applications
+- Programming and software engineering
+- Command-line tools and automation
+- Open-source software
 
 ---
 
-## Technologies & Tools
+## Technologies
 
-<img src="assets/tech-ecosystem.svg" width="100%" alt="Technology ecosystem illustration">
-
-### Programming Languages
+**Languages**
 
 <p>
   <img src="https://skillicons.dev/icons?i=c,cs,go,python,java,php,html,css&theme=dark" alt="Programming languages">
 </p>
 
-### Development Tools & Platforms
+**Tools & Platforms**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=linux,bash,git,github,vscode,gtk,sqlite,mysql&theme=dark" alt="Development tools and platforms">
+  <img src="https://skillicons.dev/icons?i=linux,bash,git,github,vscode,gtk,sqlite,mysql&theme=dark" alt="Development tools">
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/GTK%204-Native%20Linux%20UI-4A86CF?style=for-the-badge&logo=gnome&logoColor=white" alt="GTK 4">
-  <img src="https://img.shields.io/badge/Libadwaita-GNOME%20Development-613583?style=for-the-badge&logo=gnome&logoColor=white" alt="Libadwaita">
-  <img src="https://img.shields.io/badge/SQL-Database%20Queries-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL">
+  <img src="https://img.shields.io/badge/GTK%204-Native%20Desktop%20Development-4A86CF?style=flat-square&logo=gnome&logoColor=white" alt="GTK 4">
+  <img src="https://img.shields.io/badge/Libadwaita-GNOME%20Development-613583?style=flat-square&logo=gnome&logoColor=white" alt="Libadwaita">
+  <img src="https://img.shields.io/badge/SQL-Database%20Queries-336791?style=flat-square&logo=postgresql&logoColor=white" alt="SQL">
+  <img src="https://img.shields.io/badge/Scripting-Automation-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Scripting">
+  <img src="https://img.shields.io/badge/Pylint-Code%20Quality-E3B341?style=flat-square&logo=python&logoColor=black" alt="Pylint">
 </p>
 
 ---
 
-## Linux & Command-Line Development
+## Selected Projects
 
-<img src="assets/terminal-workflow.svg" width="100%" alt="Linux terminal workflow">
+A few things I've been working on.
 
-Linux is one of my main areas of interest. I enjoy working with the terminal, understanding system behaviour, developing automation tools, and exploring how Linux applications interact with the operating system.
+<table>
+  <tr>
+    <td width="50%" valign="top">
 
-I particularly enjoy building tools that make everyday Linux tasks easier.
+### [scompress](https://github.com/mrshoaibxbd/scompress)
 
----
+A local-first Linux image compressor featuring a standalone Go command-line engine and a native C + GTK4 desktop application.
 
-## Featured Projects
-
-<img src="assets/project-showcase.svg" width="100%" alt="Featured software projects">
-
-### 1. scompress
-
-<a href="https://github.com/mrshoaibxbd/scompress">
-  <img src="https://img.shields.io/badge/View%20Project-scompress-8B5CF6?style=for-the-badge&logo=github&logoColor=white" alt="scompress repository">
-</a>
 <a href="https://github.com/mrshoaibxbd/scompress/releases/latest">
-  <img src="https://img.shields.io/badge/Latest%20Release-v2.4.2-34D399?style=for-the-badge&logo=github" alt="Latest release">
+  <img src="https://img.shields.io/github/v/release/mrshoaibxbd/scompress?style=flat-square&color=8B5CF6&label=Latest%20release" alt="Latest scompress release">
 </a>
 
-A local-first Linux image compression utility featuring a standalone Go command-line engine and a native C + GTK4 desktop application.
+    </td>
+    <td width="50%" valign="top">
 
-### 2. AppSweep
+### [AppSweep](https://github.com/mrshoaibxbd/appsweep)
 
-<a href="https://github.com/mrshoaibxbd/appsweep">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mrshoaibxbd&repo=appsweep&theme=tokyonight&hide_border=true" alt="AppSweep repository card">
-</a>
+A Linux application removal utility for managing APT, Snap, and Flatpak applications safely.
 
-Safe Linux application removal for APT, Snap, and Flatpak.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
 
-### 3. SysMon Linux
-
-<a href="https://github.com/mrshoaibxbd/sysmon-linux">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mrshoaibxbd&repo=sysmon-linux&theme=tokyonight&hide_border=true" alt="SysMon Linux repository card">
-</a>
+### [SysMon Linux](https://github.com/mrshoaibxbd/sysmon-linux)
 
 Native Linux system monitoring and performance information.
 
-### 4. Lenovo Power Control
+    </td>
+    <td width="50%" valign="top">
 
-<a href="https://github.com/mrshoaibxbd/lenovo-power-control">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mrshoaibxbd&repo=lenovo-power-control&theme=tokyonight&hide_border=true" alt="Lenovo Power Control repository card">
-</a>
+### [Lenovo Power Control](https://github.com/mrshoaibxbd/lenovo-power-control)
 
-### 5. Ubuntu Setup Engine
+A project focused on Lenovo laptop power management.
 
-<a href="https://github.com/mrshoaibxbd/ubuntu-setup-engine">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mrshoaibxbd&repo=ubuntu-setup-engine&theme=tokyonight&hide_border=true" alt="Ubuntu Setup Engine repository card">
-</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
 
----
+### [Ubuntu Setup Engine](https://github.com/mrshoaibxbd/ubuntu-setup-engine)
 
-## My Development Philosophy
+A project focused on Ubuntu system setup and configuration.
 
-<img src="assets/learning-loop.svg" width="100%" alt="Learn, build, improve">
-
-<div align="center">
-
-| LEARN | BUILD | IMPROVE |
-|:---:|:---:|:---:|
-| Explore new concepts | Turn ideas into software | Refine and optimize |
-
-<br>
-
-**Learn continuously. Build thoughtfully. Improve consistently.**
-
-</div>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -146,13 +127,35 @@ Native Linux system monitoring and performance information.
 
 <div align="center">
 
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=mrshoaibxbd&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub statistics">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=mrshoaibxbd&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub statistics">
 
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mrshoaibxbd&layout=compact&theme=tokyonight&hide_border=true" alt="Most used programming languages">
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mrshoaibxbd&layout=compact&theme=tokyonight&hide_border=true" alt="Most used languages">
 
   <br><br>
 
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mrshoaibxbd&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="GitHub contribution activity">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mrshoaibxbd&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="GitHub activity graph">
+
+</div>
+
+---
+
+## A Little About My Mindset
+
+<div align="center">
+
+  <p>
+    <strong>"Talk is cheap. Show me the code."</strong>
+    <br>
+    <sub>— Linus Torvalds</sub>
+  </p>
+
+  <p>
+    <strong>Code. Learn. Improve. Ship.</strong>
+  </p>
+
+  <p>
+    <strong>Discipline today. Freedom tomorrow.</strong>
+  </p>
 
 </div>
 
@@ -160,9 +163,11 @@ Native Linux system monitoring and performance information.
 
 <div align="center">
 
-  <img src="assets/footer-animation.svg" width="100%" alt="Animated digital wave">
+  <img src="assets/footer.svg" width="100%" alt="Digital wave footer">
 
-  <h3>Building, learning, and improving one project at a time.</h3>
+  <p>
+    <strong>Building, learning, and improving one project at a time.</strong>
+  </p>
 
   <p>
     <a href="https://shoaib.tech">Website</a>
@@ -172,6 +177,6 @@ Native Linux system monitoring and performance information.
     <a href="https://github.com/mrshoaibxbd">GitHub</a>
   </p>
 
-  <sub>Thanks for visiting my profile! ✨</sub>
+  <sub>Thanks for visiting my profile.</sub>
 
 </div>
