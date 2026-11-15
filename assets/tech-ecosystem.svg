@@ -1,0 +1,303 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" width="100%" height="100%" style="background: transparent;">
+  <defs>
+    <!-- Deep Navy and Purple Gradients -->
+    <radialGradient id="hub-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#6366f1" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0" />
+    </radialGradient>
+    
+    <linearGradient id="purple-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="cyan-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="soft-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Reusable Particle / Data Packet Animation -->
+    <path id="path-vc" d="M 550,160 Q 400,160 300,105 Q 230,65 140,95" fill="none" />
+    <path id="path-prog" d="M 550,160 L 480,100 L 410,55" fill="none" />
+    <path id="path-linux" d="M 550,160 L 610,100 L 730,55" fill="none" />
+    <path id="path-db" d="M 550,160 Q 680,160 830,190" fill="none" />
+    <path id="path-auto" d="M 550,160 L 630,225 L 680,265" fill="none" />
+    <path id="path-ui" d="M 550,160 Q 420,185 300,260" fill="none" />
+  </defs>
+
+  <style>
+    .label {
+      font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-weight: 700;
+      fill: #f8fafc;
+      letter-spacing: 1.5px;
+    }
+    .sub-label {
+      font-family: 'JetBrains Mono', 'Fira Code', sans-serif;
+      font-size: 10px;
+      fill: #94a3b8;
+      letter-spacing: 1px;
+    }
+    .pathway {
+      fill: none;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      opacity: 0.35;
+    }
+    .grid-node {
+      transform-origin: center;
+    }
+  </style>
+
+  <!-- BACKGROUND GRID & AMBIENT GLOWS -->
+  <g opacity="0.4">
+    <circle cx="550" cy="160" r="160" fill="url(#hub-glow)" />
+    <!-- Cybernetic circuitry background grid (Isometric/Technical) -->
+    <path d="M 50,0 L 50,320 M 150,0 L 150,320 M 250,0 L 250,320 M 350,0 L 350,320 M 450,0 L 450,320 M 550,0 L 550,320 M 650,0 L 650,320 M 750,0 L 750,320 M 850,0 L 850,320 M 950,0 L 950,320 M 1050,0 L 1050,320" stroke="#1e293b" stroke-width="0.7" stroke-dasharray="2, 8" />
+    <path d="M 0,40 L 1100,40 M 0,100 L 1100,100 M 0,160 L 1100,160 M 0,220 L 1100,220 M 0,280 L 1100,280" stroke="#1e293b" stroke-width="0.7" stroke-dasharray="2, 8" />
+  </g>
+
+  <!-- INTERCONNECTED CIRCUIT PATHWAYS -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Version Control Path (Top-Left branch) -->
+    <path d="M 550,160 L 370,160 L 300,105 L 230,105 L 175,105" fill="none" stroke="#a855f7" stroke-width="2.2" class="pathway" />
+    <path d="M 300,105 L 260,65 L 175,65" fill="none" stroke="#a855f7" stroke-width="1.2" class="pathway" stroke-dasharray="3,3" />
+    <path d="M 230,105 L 200,145 L 175,145" fill="none" stroke="#a855f7" stroke-width="1.2" class="pathway" />
+
+    <!-- Programming Path (Top-Center Left) -->
+    <path d="M 550,160 L 480,100 L 450,100 L 410,55 L 350,55" fill="none" stroke="#c084fc" stroke-width="2" class="pathway" />
+    
+    <!-- Linux Path (Top-Center Right) -->
+    <path d="M 550,160 L 610,100 L 680,55 L 750,55" fill="none" stroke="#06b6d4" stroke-width="2" class="pathway" />
+
+    <!-- Databases Path (Bottom-Right branch) -->
+    <path d="M 550,160 L 710,160 L 800,160 L 830,195 L 925,195" fill="none" stroke="#0ea5e9" stroke-width="2.2" class="pathway" />
+    <path d="M 800,160 L 830,125 L 925,125" fill="none" stroke="#0ea5e9" stroke-width="1.2" class="pathway" />
+    
+    <!-- Automation Path (Bottom-Center Right) -->
+    <path d="M 550,160 L 630,225 L 680,265 L 750,265" fill="none" stroke="#6366f1" stroke-width="2" class="pathway" />
+    
+    <!-- Desktop UI Path (Bottom-Center Left) -->
+    <path d="M 550,160 Q 420,185 300,260 L 225,260" fill="none" stroke="#3b82f6" stroke-width="2" class="pathway" />
+    <path d="M 330,240 L 300,215 L 225,215" fill="none" stroke="#3b82f6" stroke-width="1.2" class="pathway" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- TRAVELING DATA PACKETS / LIGHT PULSES (SMIL) -->
+  <g filter="url(#neon-glow)">
+    <!-- Version Control Packet -->
+    <circle r="4" fill="#a855f7">
+      <animateMotion dur="4.2s" repeatCount="indefinite" path="M 550,160 L 370,160 L 300,105 L 230,105 L 175,105" keyTimes="0; 0.3; 0.6; 0.8; 1" />
+    </circle>
+    <!-- Programming Packet -->
+    <circle r="3.5" fill="#e879f9">
+      <animateMotion dur="3.4s" repeatCount="indefinite" path="M 550,160 L 480,100 L 450,100 L 410,55 L 350,55" />
+    </circle>
+    <!-- Linux Packet -->
+    <circle r="3.5" fill="#22d3ee">
+      <animateMotion dur="3.8s" repeatCount="indefinite" path="M 550,160 L 610,100 L 680,55 L 750,55" />
+    </circle>
+    <!-- Databases Packet -->
+    <circle r="4" fill="#38bdf8">
+      <animateMotion dur="4.8s" repeatCount="indefinite" path="M 550,160 L 710,160 L 800,160 L 830,195 L 925,195" />
+    </circle>
+    <!-- Automation Packet -->
+    <circle r="3.5" fill="#818cf8">
+      <animateMotion dur="3.6s" repeatCount="indefinite" path="M 550,160 L 630,225 L 680,265 L 750,265" />
+    </circle>
+    <!-- Desktop UI Packet -->
+    <circle r="3.5" fill="#60a5fa">
+      <animateMotion dur="4.4s" repeatCount="indefinite" path="M 550,160 Q 420,185 300,260 L 225,260" />
+    </circle>
+  </g>
+
+  <!-- SUB-NODES AND TINY CIRCUITS (PULSING) -->
+  <g fill="#06b6d4" filter="url(#soft-glow)">
+    <circle cx="370" cy="160" r="3" opacity="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" /></circle>
+    <circle cx="300" cy="105" r="2.5" opacity="0.6"><animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite" /></circle>
+    <circle cx="230" cy="105" r="3" opacity="0.9"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="2.5s" repeatCount="indefinite" /></circle>
+    <circle cx="610" cy="100" r="3" opacity="0.7"><animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.2s" repeatCount="indefinite" /></circle>
+    <circle cx="710" cy="160" r="4" opacity="0.9"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" /></circle>
+    <circle cx="800" cy="160" r="3" opacity="0.5"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.5s" repeatCount="indefinite" /></circle>
+    <circle cx="630" cy="225" r="3.5" opacity="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite" /></circle>
+  </g>
+
+  <!-- ==================== CENTRAL HUB ==================== -->
+  <g transform="translate(550, 160)">
+    <!-- Rotating External Science Rings -->
+    <circle r="72" fill="none" stroke="url(#purple-cyan)" stroke-width="1" stroke-dasharray="100 40 20 40" stroke-opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite" />
+    </circle>
+    <circle r="65" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="150 50" stroke-opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="16s" repeatCount="indefinite" />
+    </circle>
+    <circle r="56" fill="none" stroke="#a855f7" stroke-dasharray="5 15" stroke-width="2" stroke-opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Central Shield and Pulse Base -->
+    <circle r="48" fill="#090d16" stroke="url(#purple-cyan)" stroke-width="3.5" filter="url(#neon-glow)">
+      <animate attributeName="stroke-width" values="3.5;5;3.5" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle r="48" fill="none" stroke="#ffffff" stroke-width="0.7" stroke-opacity="0.5" />
+
+    <!-- Technical Inner HUD Accents -->
+    <path d="M-38,0 A38,38 0 0,1 38,0" fill="none" stroke="#06b6d4" stroke-dasharray="4, 4" stroke-width="1.5" />
+    <path d="M-34,0 A34,34 0 0,0 34,0" fill="none" stroke="#a855f7" stroke-width="1" />
+
+    <!-- Typography -->
+    <text class="label" font-size="10" y="-8" text-anchor="middle" fill="#e2e8f0" letter-spacing="1.2">SOFTWARE</text>
+    <text class="label" font-size="9" y="5" text-anchor="middle" fill="#06b6d4" letter-spacing="0.5">DEVELOPMENT</text>
+    <text class="sub-label" font-size="7" y="16" text-anchor="middle" fill="#94a3b8" letter-spacing="2">HUB // ENG</text>
+
+    <!-- Glowing Node Elements around Center Hub -->
+    <circle cx="0" cy="-48" r="3.5" fill="#22d3ee" filter="url(#soft-glow)" />
+    <circle cx="-41" cy="24" r="2.5" fill="#a855f7" />
+    <circle cx="41" cy="24" r="2.5" fill="#a855f7" />
+  </g>
+
+
+  <!-- ==================== CATEGORY 1: VERSION CONTROL ==================== -->
+  <g transform="translate(110, 105)">
+    <!-- Branch symbol, custom non-branded code network design -->
+    <g transform="translate(-10, -5)" filter="url(#soft-glow)">
+      <rect x="-18" y="-18" width="36" height="36" rx="8" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.5" />
+      <line x1="-8" y1="8" x2="-8" y2="-8" stroke="#f472b6" stroke-width="1.8" />
+      <circle cx="-8" cy="8" r="2.5" fill="#f472b6" />
+      <path d="M -8,0 Q 2,-4 4,-4 L 10,-4" fill="none" stroke="#22d3ee" stroke-width="1.8" />
+      <circle cx="10" cy="-4" r="2.5" fill="#22d3ee" />
+      <circle cx="-8" cy="-8" r="3.5" fill="#a855f7" />
+      <path d="M -8,2 A 6,6 0 0,0 -2,8 L 8,8" fill="none" stroke="#e879f9" stroke-width="1.2" stroke-dasharray="2,1" />
+    </g>
+    <!-- Card Frame and Text labels -->
+    <text class="label" font-size="12" x="20" y="-4" fill="#f8fafc">VERSION</text>
+    <text class="label" font-size="12" x="20" y="11" fill="#c084fc">CONTROL</text>
+    <text class="sub-label" x="20" y="24" fill="#a855f7">BRANCH & MERGE</text>
+    <line x1="20" y1="15" x2="105" y2="15" stroke="#a855f7" stroke-width="0.8" opacity="0.6" />
+  </g>
+
+
+  <!-- ==================== CATEGORY 2: PROGRAMMING ==================== -->
+  <g transform="translate(320, 50)">
+    <!-- Brackets/Hex geometry representing code, entirely non-branded -->
+    <g transform="translate(-15, 2)" filter="url(#soft-glow)">
+      <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="#0f172a" stroke="#e879f9" stroke-width="1.5" />
+      <text font-family="&#39;JetBrains Mono&#39;, monospace" font-size="14" font-weight="900" fill="#22d3ee" x="-7" y="5"><></text>
+      <circle cx="0" cy="-16" r="2" fill="#e879f9" />
+      <circle cx="0" cy="16" r="2" fill="#22d3ee" />
+    </g>
+    <text class="label" font-size="13" x="12" y="-3">PROGRAMMING</text>
+    <text class="sub-label" x="12" y="10" fill="#e879f9">SOURCE CODE & LOGIC</text>
+    <line x1="12" y1="1" x2="115" y2="1" stroke="#e879f9" stroke-width="0.8" opacity="0.6" />
+  </g>
+
+
+  <!-- ==================== CATEGORY 3: LINUX ==================== -->
+  <g transform="translate(730, 50)">
+    <g transform="translate(-15, 2)" filter="url(#soft-glow)">
+      <!-- Custom Terminal & Kernel node vector (not mimicking Penguin or registered marks) -->
+      <rect x="-16" y="-14" width="32" height="26" rx="5" fill="#020617" stroke="#22d3ee" stroke-width="1.5" />
+      <path d="M-12,-8 L-8,-5 L-12,-2" fill="none" stroke="#34d399" stroke-width="1.5" />
+      <line x1="-6" y1="-2" x2="-1" y2="-2" stroke="#22d3ee" stroke-width="1.5" />
+      <rect x="-10" y="4" width="20" height="4" fill="#a855f7" opacity="0.8" />
+    </g>
+    <text class="label" font-size="14" x="12" y="-3" fill="#f8fafc">LINUX</text>
+    <text class="sub-label" x="12" y="10" fill="#22d3ee">OS & KERNEL</text>
+    <line x1="12" y1="1" x2="52" y2="1" stroke="#22d3ee" stroke-width="0.8" opacity="0.6" />
+  </g>
+
+
+  <!-- ==================== CATEGORY 4: DATABASES ==================== -->
+  <g transform="translate(890, 160)">
+    <!-- Stylized, multi-tiered database cylinders -->
+    <g transform="translate(-15, 0)" filter="url(#soft-glow)">
+      <!-- Top database tier -->
+      <path d="M-15,-14 C-15,-18 15,-18 15,-14 L15,-4 C15,0 -15,0 -15,-4 Z" fill="#0f172a" stroke="#0ea5e9" stroke-width="1.5" />
+      <ellipse cx="0" cy="-14" rx="15" ry="3.5" fill="#1e293b" stroke="#0ea5e9" stroke-width="1" />
+      <!-- Middle Database Tier -->
+      <path d="M-15,1 C-15,-3 15,-3 15,1 L15,11 C15,15 -15,15 -15,11 Z" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <ellipse cx="0" cy="1" rx="15" ry="3.5" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+      
+      <!-- Inner Glowing database line paths -->
+      <line x1="-8" y1="-8" x2="8" y2="-8" stroke="#38bdf8" stroke-width="1.2" opacity="0.8" stroke-dasharray="1 2" />
+      <line x1="-8" y1="7" x2="8" y2="7" stroke="#38bdf8" stroke-width="1.2" opacity="0.8" stroke-dasharray="1 2" />
+    </g>
+    <text class="label" font-size="13" x="12" y="-5" fill="#f8fafc">DATABASES</text>
+    <text class="sub-label" x="12" y="8" fill="#0ea5e9">DATA STORAGE & SQL</text>
+    <line x1="12" y1="-1" x2="88" y2="-1" stroke="#0ea5e9" stroke-width="0.8" opacity="0.6" />
+  </g>
+
+
+  <!-- ==================== CATEGORY 5: AUTOMATION ==================== -->
+  <g transform="translate(725, 265)">
+    <!-- Distinct, intricate cybergear & workflow pattern, completely custom -->
+    <g transform="translate(-18, 0)" filter="url(#soft-glow)">
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#818cf8" stroke-width="1.8" stroke-dasharray="4 2">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#3b82f6" stroke-width="1.5" />
+      <!-- Tiny orbital connectors -->
+      <circle cx="0" cy="-8" r="1.5" fill="#3b82f6" />
+      <circle cx="7.2" cy="4" r="1.5" fill="#3b82f6" />
+      <circle cx="-7.2" cy="4" r="1.5" fill="#3b82f6" />
+    </g>
+    <text class="label" font-size="13" x="8" y="-3" fill="#f8fafc">AUTOMATION</text>
+    <text class="sub-label" x="8" y="10" fill="#818cf8">CI/CD, SCRIPTS & TASK loops</text>
+    <line x1="8" y1="1" x2="104" y2="1" stroke="#818cf8" stroke-width="0.8" opacity="0.6" />
+  </g>
+
+
+  <!-- ==================== CATEGORY 6: DESKTOP UI ==================== -->
+  <g transform="translate(100, 245)">
+    <!-- Web/Desktop layered screen outline grids -->
+    <g transform="translate(-10, 0)" filter="url(#soft-glow)">
+      <rect x="-16" y="-12" width="28" height="20" rx="4" fill="#020617" stroke="#3b82f6" stroke-width="1.8" />
+      <line x1="-16" y1="-4" x2="12" y2="-4" stroke="#3b82f6" stroke-width="1" />
+      <rect x="-10" y="-1" width="8" height="5" fill="#93c5fd" opacity="0.5" />
+      <circle cx="5" cy="1" r="2.5" fill="#34d399" />
+      <!-- Shadow screen outline -->
+      <path d="M-10,11 L16,11 L16,-4" fill="none" stroke="#2563eb" stroke-width="1" opacity="0.7" />
+    </g>
+    <text class="label" font-size="13" x="14" y="-5" fill="#f8fafc">DESKTOP UI</text>
+    <text class="sub-label" x="14" y="8" fill="#3b82f6">INTERFACE & GRAPHICS</text>
+    <line x1="14" y1="-1" x2="92" y2="-1" stroke="#3b82f6" stroke-width="0.8" opacity="0.6" />
+  </g>
+
+
+  <!-- TECHNICAL DECORATIONS: PARTICLES AND SMALL HUD INTERFACE BARS -->
+  <g opacity="0.5" filter="url(#soft-glow)">
+    <!-- Pulse indicators on connection endpoints -->
+    <circle cx="175" cy="105" r="4" fill="#f472b6"><animate attributeName="r" values="3.5;6.5;3.5" dur="1.8s" repeatCount="indefinite" /></circle>
+    <circle cx="350" cy="55" r="4" fill="#e879f9"><animate attributeName="r" values="3;5.5;3" dur="2.2s" repeatCount="indefinite" /></circle>
+    <circle cx="750" cy="55" r="4" fill="#22d3ee"><animate attributeName="r" values="4;2.5;4" dur="2.6s" repeatCount="indefinite" /></circle>
+    <circle cx="925" cy="195" r="4" fill="#0ea5e9"><animate attributeName="r" values="3;6;3" dur="2.4s" repeatCount="indefinite" /></circle>
+    <circle cx="750" cy="265" r="4" fill="#818cf8"><animate attributeName="r" values="3.5;5;3.5" dur="1.5s" repeatCount="indefinite" /></circle>
+    <circle cx="225" cy="260" r="4" fill="#3b82f6"><animate attributeName="r" values="3;5.5;3" dur="3s" repeatCount="indefinite" /></circle>
+
+    <!-- Moving Decorative Ambient Orbit Nodes around the system perimeter -->
+    <circle cx="50" cy="30" r="2.5" fill="#c084fc" opacity="0.4">
+      <animate attributeName="cy" values="30;50;30" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1060" cy="280" r="3" fill="#22d3ee" opacity="0.6">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+</svg>

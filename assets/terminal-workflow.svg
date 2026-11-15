@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
+  <defs>
+    <!-- Terminal Drop Shadow -->
+    <filter id="terminal-shadow" x="-5%" y="-8%" width="110%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#03050c" flood-opacity="0.72" />
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#8b5cf6" flood-opacity="0.22" />
+    </filter>
+
+    <!-- Soft Glow for Cyan & Green Accents -->
+    <filter id="neon-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Deep Navy Terminal Background Gradient -->
+    <linearGradient id="bg-navy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1021" />
+      <stop offset="55%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#13112c" />
+    </linearGradient>
+
+    <!-- Header Bar Gradient -->
+    <linearGradient id="header-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#151d36" />
+      <stop offset="50%" stop-color="#1a223f" />
+      <stop offset="100%" stop-color="#181b38" />
+    </linearGradient>
+
+    <!-- Futuristic Purple & Cyan Border Gradient -->
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.65" />
+    </linearGradient>
+
+    <!-- Top Accent Neon Line -->
+    <linearGradient id="top-neon-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0" />
+      <stop offset="25%" stop-color="#a855f7" stop-opacity="0.9" />
+      <stop offset="75%" stop-color="#22d3ee" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Subtle Futuristic Tech Grid Pattern -->
+    <pattern id="cyber-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#8b5cf6" stroke-width="0.6" stroke-opacity="0.055" />
+      <circle cx="28" cy="28" r="0.8" fill="#22d3ee" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Traveling Scanline Highlight Gradient -->
+    <linearGradient id="scan-beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0" />
+      <stop offset="40%" stop-color="#a855f7" stop-opacity="0.04" />
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.11" />
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Terminal Window Clip Path -->
+    <clipPath id="terminal-clip">
+      <rect x="30" y="16" width="940" height="268" rx="14" ry="14" />
+    </clipPath>
+
+    <!-- Command Sequential Reveal Clip Paths (Visible on Static First Frame at t=0s) -->
+    <!-- Line 1: $ whoami -->
+    <clipPath id="reveal-cmd-1">
+      <rect x="65" y="72" width="360" height="26">
+        <animate attributeName="width" values="360;0;0;360;360" keyTimes="0;0.01;0.04;0.13;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Line 2: shoaib -->
+    <clipPath id="reveal-out-1">
+      <rect x="65" y="96" width="360" height="26">
+        <animate attributeName="width" values="360;0;0;360;360" keyTimes="0;0.01;0.15;0.16;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Line 3: $ git status -->
+    <clipPath id="reveal-cmd-2">
+      <rect x="65" y="130" width="360" height="26">
+        <animate attributeName="width" values="360;0;0;360;360" keyTimes="0;0.01;0.21;0.31;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Line 4: On branch main -->
+    <clipPath id="reveal-out-2">
+      <rect x="65" y="154" width="360" height="26">
+        <animate attributeName="width" values="360;0;0;360;360" keyTimes="0;0.01;0.33;0.34;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Line 5: $ go test ./... -->
+    <clipPath id="reveal-cmd-3">
+      <rect x="65" y="188" width="360" height="26">
+        <animate attributeName="width" values="360;0;0;360;360" keyTimes="0;0.01;0.39;0.50;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Line 6: PASS -->
+    <clipPath id="reveal-out-3">
+      <rect x="65" y="212" width="360" height="26">
+        <animate attributeName="width" values="360;0;0;360;360" keyTimes="0;0.01;0.53;0.54;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Line 7: $ ./build.sh -->
+    <clipPath id="reveal-cmd-4">
+      <rect x="525" y="72" width="420" height="26">
+        <animate attributeName="width" values="420;0;0;420;420" keyTimes="0;0.01;0.59;0.69;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Line 8: Build completed successfully. -->
+    <clipPath id="reveal-out-4">
+      <rect x="525" y="96" width="420" height="26">
+        <animate attributeName="width" values="420;0;0;420;420" keyTimes="0;0.01;0.73;0.74;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- Main Floating Terminal Window -->
+  <g filter="url(#terminal-shadow)">
+    <rect x="30" y="16" width="940" height="268" rx="14" ry="14" fill="url(#bg-navy)" />
+  </g>
+
+  <!-- Clipped Interior Content -->
+  <g clip-path="url(#terminal-clip)">
+    <!-- Subtle Background Cyber Grid -->
+    <rect x="30" y="54" width="940" height="230" fill="url(#cyber-grid)" />
+
+    <!-- Ambient Radial Glows inside Terminal -->
+    <circle cx="180" cy="260" r="140" fill="#8b5cf6" fill-opacity="0.06" />
+    <circle cx="820" cy="110" r="150" fill="#22d3ee" fill-opacity="0.05" />
+
+    <!-- Top Title Bar -->
+    <rect x="30" y="16" width="940" height="38" fill="url(#header-bg)" />
+    <line x1="30" y1="54" x2="970" y2="54" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.3" />
+    <line x1="180" y1="16.5" x2="820" y2="16.5" stroke="url(#top-neon-line)" stroke-width="1.5" />
+
+    <!-- Window Control Dots -->
+    <circle cx="56" cy="35" r="5.5" fill="#f43f5e" fill-opacity="0.85" />
+    <circle cx="74" cy="35" r="5.5" fill="#f59e0b" fill-opacity="0.85" />
+    <circle cx="92" cy="35" r="5.5" fill="#10b981" fill-opacity="0.85" />
+
+    <!-- Terminal Header Title -->
+    <g font-family="&#39;JetBrains Mono&#39;, &#39;Fira Code&#39;, &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace" font-size="12" fill="#94a3b8">
+      <text x="500" y="39" text-anchor="middle" letter-spacing="0.6">
+        <tspan fill="#a855f7" font-weight="600">shoaib@linux-workstation</tspan><tspan fill="#475569">:</tspan><tspan fill="#22d3ee">~/workspace</tspan><tspan fill="#64748b"> — zsh</tspan>
+      </text>
+    </g>
+
+    <!-- Header Right Status Pill & Pulsing Green Indicator -->
+    <rect x="854" y="25" width="96" height="20" rx="10" fill="#0b1021" fill-opacity="0.65" stroke="#334155" stroke-width="0.8" />
+    <!-- Outer Pulsing Halo -->
+    <circle cx="868" cy="35" r="4" fill="#10b981" opacity="0.5">
+      <animate attributeName="r" values="3.5;7.5;3.5" dur="2.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.65;0.05;0.65" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+    <!-- Core Green Status Dot -->
+    <circle cx="868" cy="35" r="3.5" fill="#10b981" filter="url(#neon-glow)">
+      <animate attributeName="opacity" values="1;0.65;1" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+    <text x="879" y="39" font-family="&#39;JetBrains Mono&#39;, &#39;Fira Code&#39;, &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace" font-size="10.5" font-weight="600" fill="#10b981" letter-spacing="0.8">ONLINE</text>
+
+    <!-- Subtle Vertical Pane Divider (Split Terminal Workspace) -->
+    <line x1="490" y1="68" x2="490" y2="246" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.18" stroke-dasharray="3 5" />
+
+    <!-- Pane Labels -->
+    <text x="455" y="76" text-anchor="end" font-family="&#39;JetBrains Mono&#39;, &#39;Fira Code&#39;, &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace" font-size="10" fill="#475569" letter-spacing="1">PANE 01 // VERIFY</text>
+    <text x="945" y="76" text-anchor="end" font-family="&#39;JetBrains Mono&#39;, &#39;Fira Code&#39;, &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace" font-size="10" fill="#475569" letter-spacing="1">PANE 02 // DEPLOY</text>
+
+    <!-- ==================== LEFT PANE: COMMANDS 1 - 3 ==================== -->
+    <g font-family="&#39;JetBrains Mono&#39;, &#39;Fira Code&#39;, &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace" font-size="14.5" xml:space="preserve">
+      
+      <!-- Command 1: $ whoami -->
+      <g clip-path="url(#reveal-cmd-1)">
+        <text x="68" y="90" font-weight="600" fill="#f8fafc"><tspan fill="#a855f7">$</tspan> whoami</text>
+      </g>
+
+      <!-- Output 1: shoaib -->
+      <g clip-path="url(#reveal-out-1)">
+        <text x="68" y="114" fill="#22d3ee" font-weight="500">shoaib</text>
+      </g>
+
+      <!-- Command 2: $ git status -->
+      <g clip-path="url(#reveal-cmd-2)">
+        <text x="68" y="148" font-weight="600" fill="#f8fafc"><tspan fill="#a855f7">$</tspan> git status</text>
+      </g>
+
+      <!-- Output 2: On branch main -->
+      <g clip-path="url(#reveal-out-2)">
+        <text x="68" y="172" fill="#cbd5e1">On branch <tspan fill="#c084fc" font-weight="600">main</tspan></text>
+      </g>
+
+      <!-- Command 3: $ go test ./... -->
+      <g clip-path="url(#reveal-cmd-3)">
+        <text x="68" y="206" font-weight="600" fill="#f8fafc"><tspan fill="#a855f7">$</tspan> go test ./...</text>
+      </g>
+
+      <!-- Output 3: PASS -->
+      <g clip-path="url(#reveal-out-3)">
+        <rect x="68" y="216" width="48" height="20" rx="4" fill="#10b981" fill-opacity="0.14" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.5" />
+        <text x="75" y="231" fill="#10b981" font-weight="700" letter-spacing="0.5">PASS</text>
+      </g>
+    </g>
+
+    <!-- ==================== RIGHT PANE: COMMAND 4 & TELEMETRY CARD ==================== -->
+    <g font-family="&#39;JetBrains Mono&#39;, &#39;Fira Code&#39;, &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace" font-size="14.5" xml:space="preserve">
+      
+      <!-- Command 4: $ ./build.sh -->
+      <g clip-path="url(#reveal-cmd-4)">
+        <text x="528" y="90" font-weight="600" fill="#f8fafc"><tspan fill="#a855f7">$</tspan> ./build.sh</text>
+      </g>
+
+      <!-- Output 4: Build completed successfully. -->
+      <g clip-path="url(#reveal-out-4)">
+        <text x="528" y="114" fill="#34d399" font-weight="500">Build completed successfully.</text>
+      </g>
+
+      <!-- Active Prompt Line + Blinking Terminal Cursor -->
+      <g>
+        <animate attributeName="opacity" values="1;0;0;1;1" keyTimes="0;0.01;0.74;0.75;1" dur="12s" repeatCount="indefinite" />
+        <text x="528" y="148" font-weight="600" fill="#a855f7">$</text>
+        <!-- Blinking Cyan Block Cursor -->
+        <rect x="545" y="134" width="9" height="17" rx="1.5" fill="#22d3ee" filter="url(#neon-glow)">
+          <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1.05s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    </g>
+
+    <!-- Futuristic Pipeline Telemetry Card (Bottom Right) -->
+    <g>
+      <animate attributeName="opacity" values="1;0.25;0.25;1;1" keyTimes="0;0.01;0.73;0.78;1" dur="12s" repeatCount="indefinite" />
+      <rect x="528" y="168" width="414" height="68" rx="8" fill="#131c36" fill-opacity="0.7" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.28" />
+      
+      <!-- Card Accent Bar -->
+      <rect x="528" y="168" width="3.5" height="68" rx="1.5" fill="#22d3ee" />
+
+      <!-- Pulsing Success Check Indicator inside Card -->
+      <circle cx="552" cy="192" r="8" fill="#10b981" fill-opacity="0.16">
+        <animate attributeName="r" values="7;11;7" dur="2.4s" repeatCount="indefinite" />
+        <animate attributeName="fill-opacity" values="0.22;0.04;0.22" dur="2.4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="552" cy="192" r="4" fill="#10b981" filter="url(#neon-glow)">
+        <animate attributeName="opacity" values="1;0.6;1" dur="2.4s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Telemetry Labels -->
+      <g font-family="&#39;JetBrains Mono&#39;, &#39;Fira Code&#39;, &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace">
+        <text x="568" y="196" font-size="12" font-weight="600" fill="#e2e8f0">ARTIFACT READY</text>
+        <text x="862" y="196" font-size="11.5" font-weight="600" fill="#22d3ee">0.42s</text>
+        <text x="568" y="218" font-size="11" fill="#94a3b8">target: <tspan fill="#c084fc">linux/amd64</tspan>  •  checks: <tspan fill="#10b981">all passed</tspan></text>
+      </g>
+
+      <!-- Animated Progress Bar inside Card -->
+      <rect x="546" y="226" width="380" height="3" rx="1.5" fill="#1e293b" />
+      <rect x="546" y="226" width="380" height="3" rx="1.5" fill="url(#top-neon-line)">
+        <animate attributeName="width" values="380;0;0;380;380" keyTimes="0;0.01;0.60;0.74;1" dur="12s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Bottom Terminal Status Bar -->
+    <rect x="30" y="256" width="940" height="28" fill="#090d1a" />
+    <line x1="30" y1="256" x2="970" y2="256" stroke="#8b5cf6" stroke-width="0.8" stroke-opacity="0.25" />
+
+    <!-- Mode Pill -->
+    <rect x="42" y="261" width="68" height="18" rx="4" fill="#8b5cf6" fill-opacity="0.22" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.6" />
+    <g font-family="&#39;JetBrains Mono&#39;, &#39;Fira Code&#39;, &#39;SFMono-Regular&#39;, Consolas, &#39;Liberation Mono&#39;, Menlo, monospace" font-size="10.5">
+      <text x="76" y="274" text-anchor="middle" font-weight="700" fill="#c084fc" letter-spacing="0.8">NORMAL</text>
+      <text x="126" y="274" fill="#22d3ee" font-weight="600">git:(main)</text>
+      <text x="208" y="274" fill="#64748b">✓ clean</text>
+      <text x="952" y="274" text-anchor="end" fill="#64748b">utf-8  •  zsh 5.9  •  <tspan fill="#a855f7">100%</tspan></text>
+    </g>
+
+    <!-- Traveling Diagonal Scanning Highlight Across Terminal Window -->
+    <g>
+      <polygon points="-220,16 -60,16 60,284 -100,284" fill="url(#scan-beam)">
+        <animateTransform attributeName="transform" type="translate" from="-100 0" to="1350 0" dur="6s" repeatCount="indefinite" />
+      </polygon>
+    </g>
+  </g>
+
+  <!-- Outer Glowing Rounded Border & Corner HUD Accents -->
+  <rect x="30.5" y="16.5" width="939" height="267" rx="14" ry="14" fill="none" stroke="url(#border-grad)" stroke-width="1.5" />
+  <rect x="32" y="18" width="936" height="264" rx="12.5" ry="12.5" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1" />
+</svg>

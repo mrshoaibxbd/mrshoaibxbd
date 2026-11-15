@@ -1,0 +1,720 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Developer Coding at Futuristic Nighttime Workstation</title>
+  <desc id="hero-desc">An animated pixel-art-inspired vector illustration of a software developer in a dark hoodie coding at a dual-monitor workstation beside a futuristic nighttime city window, bathed in purple and cyan ambient lighting.</desc>
+
+  <defs>
+    <!-- Main Card Clip -->
+    <clipPath id="card-clip">
+      <rect x="16" y="10" width="1168" height="400" rx="20" />
+    </clipPath>
+
+    <!-- Window Clip -->
+    <clipPath id="window-clip">
+      <rect x="64" y="42" width="320" height="236" rx="8" />
+    </clipPath>
+
+    <!-- Room Background Gradients -->
+    <linearGradient id="bg-wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070913" />
+      <stop offset="55%" stop-color="#0d1024" />
+      <stop offset="100%" stop-color="#14112e" />
+    </linearGradient>
+
+    <linearGradient id="card-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.45" />
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0.25" />
+    </linearGradient>
+
+    <!-- Window Sky Gradient -->
+    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#04050c" />
+      <stop offset="60%" stop-color="#0e1330" />
+      <stop offset="100%" stop-color="#26174a" />
+    </linearGradient>
+
+    <!-- Monitor Glow Gradients (Pure Radial Gradients, No Heavy Filters) -->
+    <radialGradient id="cyan-ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.28" />
+      <stop offset="55%" stop-color="#00f2fe" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="purple-ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.34" />
+      <stop offset="55%" stop-color="#7c3aed" stop-opacity="0.11" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="lavender-rim" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c4b5fd" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Desk Surface Gradient -->
+    <linearGradient id="desk-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#12162d" />
+      <stop offset="35%" stop-color="#1c2242" />
+      <stop offset="70%" stop-color="#231d47" />
+      <stop offset="100%" stop-color="#12152b" />
+    </linearGradient>
+
+    <linearGradient id="desk-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Character Hoodie Gradient -->
+    <linearGradient id="hoodie-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#191d36" />
+      <stop offset="60%" stop-color="#111428" />
+      <stop offset="100%" stop-color="#0b0d1b" />
+    </linearGradient>
+
+    <linearGradient id="chair-back" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2444" />
+      <stop offset="100%" stop-color="#0c0f20" />
+    </linearGradient>
+
+    <!-- Subtle Pixel Grid Pattern -->
+    <pattern id="pixel-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#c4b5fd" stroke-width="1" stroke-opacity="0.03" />
+    </pattern>
+  </defs>
+
+  <!-- MAIN ILLUSTRATION SCENE (Clipped to rounded floating card on transparent canvas) -->
+  <g clip-path="url(#card-clip)">
+    <!-- Base Wall Background -->
+    <rect x="16" y="10" width="1168" height="400" fill="url(#bg-wall)" />
+    <rect x="16" y="10" width="1168" height="400" fill="url(#pixel-grid)" />
+
+    <!-- Architectural Wall Panel Lines -->
+    <g stroke="#1e2548" stroke-width="1.5" opacity="0.6">
+      <line x1="430" y1="10" x2="430" y2="310" />
+      <line x1="940" y1="10" x2="940" y2="310" />
+      <line x1="430" y1="92" x2="1184" y2="92" />
+    </g>
+
+    <!-- Decorative Wall Acoustic Pixel Panels (Top Right) -->
+    <g fill="#151934" stroke="#283059" stroke-width="1">
+      <rect x="975" y="34" width="38" height="38" rx="4" />
+      <rect x="1021" y="34" width="38" height="38" rx="4" />
+      <rect x="1067" y="34" width="38" height="38" rx="4" />
+      <rect x="1113" y="34" width="38" height="38" rx="4" />
+      <!-- Glowing LED accents on acoustic tiles -->
+      <rect x="983" y="42" width="6" height="6" fill="#00f2fe" opacity="0.7" />
+      <rect x="1075" y="42" width="6" height="6" fill="#a855f7" opacity="0.7" />
+      <rect x="1121" y="42" width="6" height="6" fill="#00f2fe" opacity="0.5" />
+    </g>
+
+    <!-- Floating Shelf Above Monitors -->
+    <g>
+      <rect x="470" y="54" width="240" height="8" rx="3" fill="#1b2141" />
+      <rect x="470" y="60" width="240" height="2" fill="#7c3aed" opacity="0.5" />
+      <!-- Small Books / Pixel Artifacts on Shelf -->
+      <rect x="488" y="30" width="12" height="24" rx="2" fill="#312e81" />
+      <rect x="502" y="34" width="10" height="20" rx="2" fill="#0284c7" />
+      <rect x="514" y="28" width="14" height="26" rx="2" fill="#6d28d9" />
+      <!-- Pixel Companion Cube on Shelf -->
+      <rect x="556" y="36" width="18" height="18" rx="3" fill="#1e293b" stroke="#00f2fe" stroke-width="1.5" />
+      <rect x="561" y="41" width="3" height="4" fill="#00f2fe" />
+      <rect x="566" y="41" width="3" height="4" fill="#00f2fe" />
+      <!-- Small Succulent Plant on Shelf -->
+      <rect x="662" y="40" width="22" height="14" rx="3" fill="#334155" />
+      <path d="M665 40 L669 28 L673 40 Z" fill="#10b981" />
+      <path d="M671 40 L676 25 L681 40 Z" fill="#059669" />
+      <path d="M660 40 L664 31 L668 40 Z" fill="#34d399" />
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- FUTURISTIC NIGHTTIME CITY WINDOW (LEFT)                   -->
+    <!-- ========================================================= -->
+    <g>
+      <!-- Outer Window Frame -->
+      <rect x="56" y="34" width="336" height="252" rx="12" fill="#11152c" stroke="#2a325e" stroke-width="2" />
+      
+      <g clip-path="url(#window-clip)">
+        <!-- Night Sky -->
+        <rect x="64" y="42" width="320" height="236" fill="url(#sky-grad)" />
+
+        <!-- Distant Stars (Pixel Squares) -->
+        <g fill="#e2e8f0">
+          <rect x="88" y="58" width="2" height="2" opacity="0.8">
+            <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite" />
+          </rect>
+          <rect x="134" y="74" width="3" height="3" fill="#00f2fe" opacity="0.7" />
+          <rect x="178" y="52" width="2" height="2" opacity="0.5" />
+          <rect x="225" y="66" width="2" height="2" opacity="0.9">
+            <animate attributeName="opacity" values="0.9;0.3;0.9" dur="8s" repeatCount="indefinite" />
+          </rect>
+          <rect x="268" y="84" width="2" height="2" fill="#c4b5fd" opacity="0.7" />
+          <rect x="348" y="58" width="2" height="2" opacity="0.6" />
+        </g>
+
+        <!-- Crescent Cyber Moon -->
+        <circle cx="318" cy="82" r="18" fill="#c4b5fd" opacity="0.9" />
+        <circle cx="311" cy="77" r="16" fill="#080b1c" />
+
+        <!-- Distant Horizon Glow -->
+        <ellipse cx="224" cy="260" rx="180" ry="55" fill="#7c3aed" opacity="0.28" />
+
+        <!-- Far City Skyline Silhouette -->
+        <path d="M64 278 L64 176 L88 176 L88 152 L118 152 L118 188 L136 188 L136 132 L172 132 L172 168 L194 168 L194 118 L232 118 L232 162 L254 162 L254 140 L292 140 L292 174 L316 174 L316 126 L354 126 L354 164 L384 164 L384 278 Z" fill="#0c1026" />
+
+        <!-- Midground Futuristic Towers (Pixel-Art Stepped Geometry) -->
+        <!-- Tower 1 -->
+        <rect x="74" y="168" width="38" height="110" fill="#131836" />
+        <rect x="82" y="156" width="22" height="12" fill="#131836" />
+        <rect x="91" y="138" width="4" height="18" fill="#00f2fe" opacity="0.7" />
+        <!-- Tower 2 (Tall Spire) -->
+        <rect x="138" y="124" width="44" height="154" fill="#161b3d" />
+        <polygon points="138,124 160,96 182,124" fill="#1e244d" />
+        <rect x="159" y="80" width="2" height="16" fill="#a855f7" />
+        <!-- Tower 3 (Cyan Neon strips) -->
+        <rect x="202" y="142" width="50" height="136" fill="#111633" />
+        <rect x="208" y="150" width="38" height="3" fill="#00f2fe" opacity="0.8" />
+        <rect x="208" y="158" width="38" height="2" fill="#00f2fe" opacity="0.5" />
+        <!-- Tower 4 -->
+        <rect x="272" y="154" width="46" height="124" fill="#15193b" />
+        <!-- Tower 5 -->
+        <rect x="334" y="136" width="42" height="142" fill="#121735" />
+
+        <!-- Pixel Building Windows (Lit Cyan, Purple, Lavender) -->
+        <g fill="#00f2fe" opacity="0.75">
+          <rect x="82" y="178" width="6" height="4" />
+          <rect x="94" y="178" width="6" height="4" />
+          <rect x="82" y="190" width="6" height="4" />
+          <rect x="82" y="202" width="6" height="4" />
+          <rect x="94" y="214" width="6" height="4" />
+
+          <rect x="212" y="174" width="4" height="48" />
+          <rect x="224" y="174" width="4" height="62" />
+          <rect x="236" y="174" width="4" height="40" />
+
+          <rect x="344" y="148" width="8" height="3" />
+          <rect x="344" y="156" width="8" height="3" />
+          <rect x="344" y="164" width="8" height="3" />
+          <rect x="344" y="172" width="8" height="3" />
+        </g>
+
+        <g fill="#c084fc" opacity="0.75">
+          <rect x="146" y="136" width="8" height="4" />
+          <rect x="162" y="136" width="8" height="4" />
+          <rect x="146" y="146" width="8" height="4" />
+          <rect x="162" y="146" width="8" height="4" />
+          <rect x="146" y="156" width="8" height="4" />
+          <rect x="146" y="176" width="24" height="3" fill="#00f2fe" />
+          <rect x="146" y="186" width="8" height="4" />
+          <rect x="162" y="196" width="8" height="4" />
+
+          <rect x="282" y="166" width="6" height="6" />
+          <rect x="294" y="166" width="6" height="6" />
+          <rect x="306" y="166" width="6" height="6" />
+          <rect x="282" y="180" width="6" height="6" />
+          <rect x="306" y="180" width="6" height="6" />
+          <rect x="294" y="194" width="6" height="6" />
+        </g>
+
+        <!-- Animated Traffic Light Streamers in Futuristic Sky Lanes -->
+        <g>
+          <rect x="60" y="226" width="16" height="2" rx="1" fill="#00f2fe" opacity="0.85">
+            <animate attributeName="x" values="60;390" dur="8s" repeatCount="indefinite" />
+          </rect>
+          <rect x="220" y="226" width="12" height="2" rx="1" fill="#00f2fe" opacity="0.65">
+            <animate attributeName="x" values="220;550" dur="8s" repeatCount="indefinite" />
+          </rect>
+          <rect x="360" y="242" width="14" height="2" rx="1" fill="#f43f5e" opacity="0.8">
+            <animate attributeName="x" values="380;40" dur="8s" repeatCount="indefinite" />
+          </rect>
+          <rect x="190" y="242" width="10" height="2" rx="1" fill="#c084fc" opacity="0.8">
+            <animate attributeName="x" values="190;-150" dur="8s" repeatCount="indefinite" />
+          </rect>
+        </g>
+
+        <!-- Window Mullions & Subtle Glass Reflection -->
+        <line x1="224" y1="42" x2="224" y2="278" stroke="#0d1126" stroke-width="6" />
+        <line x1="64" y1="196" x2="384" y2="196" stroke="#0d1126" stroke-width="5" />
+        <polygon points="72,48 125,48 85,188 72,188" fill="#ffffff" opacity="0.025" />
+      </g>
+
+      <!-- Window Sill -->
+      <rect x="48" y="282" width="352" height="10" rx="3" fill="#1b2142" stroke="#2e386b" stroke-width="1" />
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- AMBIENT MONITOR BACKLIGHT GLOWS (ANIMATED 8S PULSE)       -->
+    <!-- ========================================================= -->
+    <g>
+      <!-- Left/Center Cyan Glow -->
+      <ellipse cx="475" cy="195" rx="220" ry="150" fill="url(#cyan-ambient)">
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="8s" repeatCount="indefinite" />
+      </ellipse>
+      <!-- Center/Right Purple Glow -->
+      <ellipse cx="695" cy="195" rx="270" ry="175" fill="url(#purple-ambient)">
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="8s" repeatCount="indefinite" />
+      </ellipse>
+      <!-- Character Rim Ambient Glow -->
+      <ellipse cx="620" cy="260" rx="160" ry="110" fill="url(#lavender-rim)">
+        <animate attributeName="opacity" values="0.6;0.95;0.6" dur="4s" repeatCount="indefinite" />
+      </ellipse>
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- DESK & WORKSTATION HARDWARE                               -->
+    <!-- ========================================================= -->
+    <!-- Desk Surface -->
+    <g>
+      <polygon points="16,304 1184,304 1184,344 16,344" fill="url(#desk-top)" />
+      <!-- Glowing RGB Desk Edge Strip -->
+      <rect x="16" y="304" width="1168" height="3" fill="url(#desk-edge)">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite" />
+      </rect>
+      <!-- Under-desk deep shadow -->
+      <rect x="16" y="344" width="1168" height="66" fill="#050711" />
+      <!-- Desk Left & Right Support Legs -->
+      <rect x="96" y="344" width="22" height="66" fill="#0d1022" />
+      <rect x="1082" y="344" width="22" height="66" fill="#0d1022" />
+    </g>
+
+    <!-- Desk Light Reflections -->
+    <ellipse cx="455" cy="318" rx="95" ry="9" fill="#00f2fe" opacity="0.12" />
+    <ellipse cx="685" cy="320" rx="135" ry="11" fill="#a855f7" opacity="0.14" />
+
+    <!-- Dual Monitor Arm Mount -->
+    <g>
+      <rect x="546" y="284" width="44" height="22" rx="4" fill="#0f1326" stroke="#252d54" stroke-width="1.5" />
+      <rect x="560" y="220" width="16" height="66" fill="#151a33" />
+      <path d="M568 232 L465 205" stroke="#1e2547" stroke-width="8" stroke-linecap="round" />
+      <path d="M568 232 L680 205" stroke="#1e2547" stroke-width="8" stroke-linecap="round" />
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- SECOND MONITOR (LEFT): LINUX TERMINAL & SYSTEM DASHBOARD  -->
+    <!-- ========================================================= -->
+    <g>
+      <!-- Outer Bezel (Slightly angled perspective) -->
+      <rect x="358" y="114" width="206" height="144" rx="8" fill="#0d1021" stroke="#00f2fe" stroke-width="1.5" stroke-opacity="0.65" />
+      <!-- Screen Inner Area -->
+      <rect x="365" y="121" width="192" height="130" rx="4" fill="#070a17" />
+
+      <!-- Top Tiling Window Manager Bar (i3 / Hyprland style) -->
+      <rect x="365" y="121" width="192" height="11" fill="#10162f" />
+      <rect x="369" y="124" width="5" height="5" rx="1" fill="#00f2fe" />
+      <rect x="377" y="124" width="5" height="5" rx="1" fill="#7c3aed" />
+      <rect x="385" y="124" width="5" height="5" rx="1" fill="#334155" />
+      <rect x="528" y="124" width="24" height="5" rx="1" fill="#00f2fe" opacity="0.5" />
+
+      <!-- Left Split: Linux Terminal -->
+      <rect x="369" y="136" width="112" height="110" rx="3" fill="#050711" stroke="#162042" stroke-width="1" />
+      <!-- Terminal Prompt Lines -->
+      <!-- Prompt 1: neofetch / system info -->
+      <rect x="374" y="142" width="10" height="3" fill="#10b981" />
+      <rect x="387" y="142" width="28" height="3" fill="#00f2fe" />
+      <!-- Mini ASCII Distro Logo + Stats -->
+      <path d="M379 151 L384 151 L387 161 L376 161 Z" fill="#00f2fe" opacity="0.85" />
+      <rect x="393" y="150" width="36" height="2.5" fill="#c084fc" />
+      <rect x="393" y="155" width="48" height="2.5" fill="#94a3b8" />
+      <rect x="393" y="160" width="42" height="2.5" fill="#38bdf8" />
+      <rect x="393" y="165" width="30" height="2.5" fill="#a855f7" />
+
+      <!-- Prompt 2: cargo test / docker compose -->
+      <rect x="374" y="175" width="10" height="3" fill="#10b981" />
+      <rect x="387" y="175" width="54" height="3" fill="#e2e8f0" />
+      <rect x="374" y="182" width="76" height="2.5" fill="#64748b" />
+      <rect x="374" y="187" width="62" height="2.5" fill="#64748b" />
+      <rect x="374" y="192" width="48" height="2.5" fill="#10b981" />
+
+      <!-- Prompt 3: Active command line + Blinking Cursor -->
+      <rect x="374" y="204" width="10" height="3" fill="#10b981" />
+      <rect x="387" y="204" width="32" height="3" fill="#38bdf8" />
+      <!-- Blinking Terminal Cursor -->
+      <rect x="422" y="202" width="6" height="7" fill="#00f2fe">
+        <animate attributeName="opacity" values="1;0;1;0;1;0;1;0;1" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Right Split: System Dashboard (CPU / RAM / Network) -->
+      <rect x="485" y="136" width="68" height="110" rx="3" fill="#050711" stroke="#162042" stroke-width="1" />
+      <!-- CPU Usage Bars -->
+      <rect x="490" y="142" width="22" height="3" fill="#c4b5fd" />
+      <rect x="490" y="149" width="58" height="4" rx="1" fill="#1e293b" />
+      <rect x="490" y="149" width="42" height="4" rx="1" fill="#00f2fe">
+        <animate attributeName="width" values="42;50;36;42" dur="8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="490" y="156" width="58" height="4" rx="1" fill="#1e293b" />
+      <rect x="490" y="156" width="34" height="4" rx="1" fill="#a855f7">
+        <animate attributeName="width" values="34;46;28;34" dur="8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="490" y="163" width="58" height="4" rx="1" fill="#1e293b" />
+      <rect x="490" y="163" width="48" height="4" rx="1" fill="#38bdf8">
+        <animate attributeName="width" values="48;38;52;48" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Memory Ring / Gauge -->
+      <circle cx="519" cy="192" r="14" fill="none" stroke="#1e293b" stroke-width="4" />
+      <circle cx="519" cy="192" r="14" fill="none" stroke="#00f2fe" stroke-width="4" stroke-dasharray="62 88" stroke-linecap="round" />
+      <rect x="513" y="190" width="12" height="4" rx="1" fill="#e2e8f0" />
+
+      <!-- Network Sparkline Graph -->
+      <polyline points="490,236 498,230 506,233 514,222 522,228 530,218 538,225 548,216" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <rect x="490" y="239" width="58" height="2" fill="#1e293b" />
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- MAIN MONITOR (CENTER-RIGHT): CODE EDITOR IDE              -->
+    <!-- ========================================================= -->
+    <g>
+      <!-- Outer Monitor Frame -->
+      <rect x="580" y="96" width="268" height="168" rx="9" fill="#0d1021" stroke="#a855f7" stroke-width="1.8" stroke-opacity="0.75" />
+      <!-- Inner IDE Screen -->
+      <rect x="588" y="104" width="252" height="152" rx="5" fill="#080b18" />
+
+      <!-- IDE Titlebar & Tabs -->
+      <rect x="588" y="104" width="252" height="14" fill="#11162e" />
+      <circle cx="597" cy="111" r="2.5" fill="#f43f5e" />
+      <circle cx="605" cy="111" r="2.5" fill="#f59e0b" />
+      <circle cx="613" cy="111" r="2.5" fill="#10b981" />
+      <!-- Active Editor Tab -->
+      <rect x="626" y="106" width="58" height="12" rx="2" fill="#080b18" />
+      <rect x="626" y="106" width="58" height="2" fill="#00f2fe" />
+      <rect x="633" y="111" width="38" height="3" rx="1" fill="#e2e8f0" />
+      <!-- Inactive Tab -->
+      <rect x="688" y="108" width="48" height="10" rx="2" fill="#0d1124" />
+      <rect x="695" y="112" width="32" height="3" rx="1" fill="#64748b" />
+
+      <!-- Left File Tree Sidebar -->
+      <rect x="588" y="118" width="38" height="130" fill="#0b0f21" />
+      <g fill="#475569">
+        <rect x="593" y="126" width="22" height="3" rx="1" fill="#94a3b8" />
+        <rect x="597" y="134" width="24" height="3" rx="1" fill="#00f2fe" />
+        <rect x="597" y="142" width="20" height="3" rx="1" />
+        <rect x="597" y="150" width="26" height="3" rx="1" fill="#c084fc" />
+        <rect x="597" y="158" width="18" height="3" rx="1" />
+        <rect x="593" y="168" width="22" height="3" rx="1" fill="#94a3b8" />
+        <rect x="597" y="176" width="24" height="3" rx="1" />
+        <rect x="597" y="184" width="20" height="3" rx="1" />
+      </g>
+
+      <!-- Gutter Line Numbers -->
+      <g fill="#334155">
+        <rect x="631" y="126" width="5" height="3" rx="1" />
+        <rect x="631" y="134" width="5" height="3" rx="1" />
+        <rect x="631" y="142" width="5" height="3" rx="1" />
+        <rect x="631" y="150" width="5" height="3" rx="1" />
+        <rect x="631" y="158" width="5" height="3" rx="1" />
+        <rect x="631" y="166" width="5" height="3" rx="1" />
+        <rect x="631" y="174" width="5" height="3" rx="1" />
+        <rect x="631" y="182" width="5" height="3" rx="1" />
+        <rect x="631" y="190" width="5" height="3" rx="1" fill="#00f2fe" />
+        <rect x="631" y="198" width="5" height="3" rx="1" />
+        <rect x="631" y="206" width="5" height="3" rx="1" />
+        <rect x="631" y="214" width="5" height="3" rx="1" />
+        <rect x="631" y="222" width="5" height="3" rx="1" />
+      </g>
+
+      <!-- Active Line Highlight Bar -->
+      <rect x="626" y="188" width="182" height="8" fill="#1e293b" opacity="0.55" />
+
+      <!-- Colorful Syntax Highlighted Code Lines -->
+      <!-- Line 1: import / module declaration -->
+      <rect x="642" y="126" width="20" height="3.5" rx="1" fill="#c084fc" />
+      <rect x="666" y="126" width="38" height="3.5" rx="1" fill="#00f2fe" />
+      <rect x="708" y="126" width="14" height="3.5" rx="1" fill="#c084fc" />
+      <rect x="726" y="126" width="46" height="3.5" rx="1" fill="#34d399" />
+
+      <!-- Line 2: struct / interface -->
+      <rect x="642" y="134" width="26" height="3.5" rx="1" fill="#f472b6" />
+      <rect x="672" y="134" width="44" height="3.5" rx="1" fill="#fbbf24" />
+      <rect x="720" y="134" width="8" height="3.5" rx="1" fill="#94a3b8" />
+
+      <!-- Line 3: indented properties -->
+      <rect x="652" y="142" width="30" height="3.5" rx="1" fill="#38bdf8" />
+      <rect x="686" y="142" width="24" height="3.5" rx="1" fill="#c084fc" />
+      <rect x="714" y="142" width="36" height="3.5" rx="1" fill="#34d399" />
+
+      <!-- Line 4 -->
+      <rect x="652" y="150" width="36" height="3.5" rx="1" fill="#38bdf8" />
+      <rect x="692" y="150" width="48" height="3.5" rx="1" fill="#f59e0b" />
+
+      <!-- Line 5: closing brace -->
+      <rect x="642" y="158" width="8" height="3.5" rx="1" fill="#94a3b8" />
+
+      <!-- Line 6: async function definition -->
+      <rect x="642" y="166" width="22" height="3.5" rx="1" fill="#c084fc" />
+      <rect x="668" y="166" width="16" height="3.5" rx="1" fill="#f472b6" />
+      <rect x="688" y="166" width="54" height="3.5" rx="1" fill="#00f2fe" />
+      <rect x="746" y="166" width="32" height="3.5" rx="1" fill="#e2e8f0" />
+
+      <!-- Line 7: logic inside function -->
+      <rect x="652" y="174" width="18" height="3.5" rx="1" fill="#c084fc" />
+      <rect x="674" y="174" width="34" height="3.5" rx="1" fill="#e2e8f0" />
+      <rect x="712" y="174" width="48" height="3.5" rx="1" fill="#38bdf8" />
+
+      <!-- Line 8 -->
+      <rect x="662" y="182" width="28" height="3.5" rx="1" fill="#00f2fe" />
+      <rect x="694" y="182" width="60" height="3.5" rx="1" fill="#34d399" />
+
+      <!-- Line 9: Active Typing Line (Animated Width + Cursor) -->
+      <rect x="662" y="190" width="24" height="3.5" rx="1" fill="#f472b6" />
+      <rect x="690" y="190" width="42" height="3.5" rx="1" fill="#00f2fe">
+        <animate attributeName="width" values="18;48;48;18" dur="8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="742" y="189" width="2" height="5.5" fill="#e2e8f0">
+        <animate attributeName="x" values="712;742;742;712" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;0;1;0;1;0;1;0;1" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Line 10 -->
+      <rect x="652" y="198" width="22" height="3.5" rx="1" fill="#c084fc" />
+      <rect x="678" y="198" width="40" height="3.5" rx="1" fill="#fbbf24" />
+
+      <!-- Line 11 -->
+      <rect x="642" y="206" width="8" height="3.5" rx="1" fill="#94a3b8" />
+
+      <!-- Code Minimap on Right Edge -->
+      <g fill="#334155" opacity="0.7">
+        <rect x="814" y="124" width="20" height="2" />
+        <rect x="814" y="128" width="16" height="2" fill="#a855f7" />
+        <rect x="814" y="132" width="22" height="2" />
+        <rect x="814" y="136" width="18" height="2" fill="#00f2fe" />
+        <rect x="814" y="140" width="12" height="2" />
+        <rect x="814" y="146" width="20" height="2" fill="#a855f7" />
+        <rect x="814" y="150" width="22" height="2" />
+        <rect x="814" y="154" width="15" height="2" />
+        <rect x="810" y="122" width="26" height="22" rx="1" fill="#c4b5fd" opacity="0.12" />
+      </g>
+
+      <!-- Bottom IDE Status Bar -->
+      <rect x="588" y="248" width="252" height="8" fill="#6d28d9" />
+      <rect x="592" y="250" width="24" height="4" rx="1" fill="#00f2fe" />
+      <rect x="622" y="250" width="36" height="4" rx="1" fill="#e9d5ff" opacity="0.8" />
+      <rect x="806" y="250" width="28" height="4" rx="1" fill="#e9d5ff" opacity="0.8" />
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- MODERN COMPUTER WORKSTATION TOWER (RIGHT ON DESK)         -->
+    <!-- ========================================================= -->
+    <g>
+      <!-- PC Case Chassis -->
+      <rect x="915" y="148" width="112" height="160" rx="8" fill="#10142a" stroke="#2e3666" stroke-width="2" />
+      <!-- Front Panel Cyber Mesh & Power LED -->
+      <rect x="995" y="154" width="26" height="148" rx="4" fill="#0a0d1c" />
+      <rect x="1005" y="164" width="6" height="6" rx="1" fill="#00f2fe" />
+      <line x1="1008" y1="180" x2="1008" y2="292" stroke="#7c3aed" stroke-width="2" stroke-opacity="0.7" />
+
+      <!-- Tempered Glass Side Panel -->
+      <rect x="923" y="158" width="66" height="138" rx="4" fill="#070914" stroke="#1e264a" stroke-width="1.5" />
+
+      <!-- Internal Motherboard & GPU Backplate -->
+      <rect x="929" y="166" width="46" height="72" rx="2" fill="#121730" />
+      <!-- AIO Liquid Cooler Pump Ring (Cyan/Purple) -->
+      <circle cx="952" cy="194" r="13" fill="#090d1c" stroke="#00f2fe" stroke-width="3">
+        <animate attributeName="stroke" values="#00f2fe;#a855f7;#00f2fe" dur="8s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="952" cy="194" r="5" fill="#c4b5fd" />
+      <!-- RAM RGB Sticks -->
+      <rect x="970" y="178" width="3" height="24" rx="1" fill="#00f2fe" />
+      <rect x="975" y="178" width="3" height="24" rx="1" fill="#a855f7" />
+      <rect x="980" y="178" width="3" height="24" rx="1" fill="#00f2fe" />
+
+      <!-- Horizontal GPU with Glowing GEFORCE/RADEON Accent Bar -->
+      <rect x="927" y="232" width="58" height="16" rx="2" fill="#1e2444" />
+      <rect x="931" y="238" width="36" height="4" rx="1" fill="#a855f7" />
+      <rect x="970" y="238" width="10" height="4" rx="1" fill="#00f2fe" />
+
+      <!-- PSU Shroud at bottom of case -->
+      <rect x="925" y="264" width="62" height="30" rx="2" fill="#0c1021" />
+      <rect x="933" y="276" width="28" height="3" fill="#00f2fe" opacity="0.6" />
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- DESK ACCESSORIES: KEYBOARD, MOUSE, COFFEE MUG             -->
+    <!-- ========================================================= -->
+    <!-- Extended Desk Mat -->
+    <polygon points="440,308 860,308 880,336 420,336" fill="#0b0e1f" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.6" />
+
+    <!-- Mechanical 75% Keyboard with RGB Underglow -->
+    <g>
+      <polygon points="565,312 695,312 703,328 557,328" fill="#181e3b" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.7" />
+      <!-- Keycap Rows (Pixel blocks) -->
+      <g fill="#2a335c">
+        <rect x="568" y="315" width="8" height="3" rx="0.5" fill="#f43f5e" />
+        <rect x="579" y="315" width="92" height="3" rx="0.5" />
+        <rect x="674" y="315" width="14" height="3" rx="0.5" fill="#7c3aed" />
+
+        <rect x="565" y="320" width="14" height="3" rx="0.5" fill="#00f2fe" />
+        <rect x="582" y="320" width="90" height="3" rx="0.5" />
+        <rect x="675" y="320" width="18" height="3" rx="0.5" fill="#a855f7" />
+
+        <rect x="563" y="324" width="32" height="3" rx="0.5" />
+        <rect x="598" y="324" width="52" height="3" rx="0.5" fill="#00f2fe" opacity="0.85" />
+        <rect x="653" y="324" width="42" height="3" rx="0.5" />
+      </g>
+    </g>
+
+    <!-- Ergonomic Wireless Gaming Mouse -->
+    <g>
+      <ellipse cx="764" cy="322" rx="14" ry="8" fill="#181e3b" stroke="#a855f7" stroke-width="1.2" />
+      <rect x="758" y="319" width="5" height="2" rx="1" fill="#00f2fe" />
+    </g>
+
+    <!-- Ceramic Coffee Mug + Rising Steam (Left Side of Desk) -->
+    <g>
+      <!-- Mug Handle -->
+      <path d="M312 292 C303 292 303 306 312 306" fill="none" stroke="#c4b5fd" stroke-width="3.5" stroke-linecap="round" />
+      <!-- Mug Body -->
+      <rect x="311" y="285" width="26" height="28" rx="4" fill="#1e2447" stroke="#c4b5fd" stroke-width="1.5" />
+      <!-- Cyan Pixel Stripe on Mug -->
+      <rect x="312" y="294" width="24" height="4" fill="#00f2fe" opacity="0.8" />
+      <!-- Subtle Steam Wisps -->
+      <path d="M319 280 Q316 271 321 264" fill="none" stroke="#c4b5fd" stroke-width="1.8" stroke-linecap="round" opacity="0.5">
+        <animate attributeName="opacity" values="0.2;0.65;0.2" dur="4s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="translate" values="0,2; 0,-5; 0,2" dur="4s" repeatCount="indefinite" />
+      </path>
+      <path d="M328 278 Q331 269 326 261" fill="none" stroke="#00f2fe" stroke-width="1.8" stroke-linecap="round" opacity="0.4">
+        <animate attributeName="opacity" values="0.6;0.15;0.6" dur="4s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="translate" values="0,-4; 0,2; 0,-4" dur="4s" repeatCount="indefinite" />
+      </path>
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- CHARACTER: YOUNG MALE DEVELOPER (THREE-QUARTER REAR VIEW) -->
+    <!-- Consistent signature design: Dark navy/charcoal hoodie    -->
+    <!-- with cyan & purple trim, modern tapered dark hair,        -->
+    <!-- focused posture, subtle typing & 8s breathing animation.  -->
+    <!-- ========================================================= -->
+    <g id="developer-character">
+      <!-- Typing Arms & Hands (Reaching toward keyboard/mouse) -->
+      <!-- Left Arm & Hand (On Keyboard WASD/Home Row) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0.5; 0,-1.5; 0,0; 0,-2; 0,0" dur="8s" repeatCount="indefinite" />
+        <path d="M472 288 L565 316 L585 322 L505 306 Z" fill="#141830" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.4" />
+        <!-- Left Hand Fingers on Keys -->
+        <rect x="568" y="313" width="16" height="8" rx="3" fill="#e0ac8b" />
+      </g>
+
+      <!-- Right Arm & Hand (Typing on Right Side of Keyboard) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,-1.5; 0,0.5; 0,-2; 0,0; 0,-1.5; 0,0.5; 0,-1.5" dur="8s" repeatCount="indefinite" />
+        <path d="M624 294 L668 316 L648 323 L598 308 Z" fill="#171b36" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5" />
+        <!-- Right Hand Fingers on Keys -->
+        <rect x="646" y="314" width="16" height="8" rx="3" fill="#e0ac8b" />
+      </g>
+
+      <!-- Breathing Upper Torso, Shoulders, Hoodie & Head -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3.5; 0,0" dur="8s" repeatCount="indefinite" />
+
+        <!-- Torso & Broad Hoodie Shoulders (Three-quarter rear angle facing slightly right) -->
+        <path d="M446 410 L458 296 C462 266 492 252 548 252 C604 252 634 268 640 298 L654 410 Z" fill="url(#hoodie-body)" />
+
+        <!-- Cyan Rim Highlight on Left Shoulder & Hood Edge -->
+        <path d="M459 298 C463 269 490 254 532 253" fill="none" stroke="#00f2fe" stroke-width="3" stroke-linecap="round" opacity="0.85" />
+
+        <!-- Purple/Lavender Rim Highlight on Right Shoulder -->
+        <path d="M566 253 C604 255 632 270 639 298" fill="none" stroke="#c084fc" stroke-width="3" stroke-linecap="round" opacity="0.9" />
+
+        <!-- Signature Hoodie Draped Hood (Resting on upper back) -->
+        <path d="M484 256 C495 292 595 294 610 257 C592 242 504 242 484 256 Z" fill="#1f2547" stroke="#3b447a" stroke-width="1.5" />
+        <!-- Inner Hood Fold Detail -->
+        <path d="M502 258 C516 278 578 279 592 259" fill="none" stroke="#0d1021" stroke-width="3" stroke-linecap="round" />
+        <!-- Signature Cyber Seam Accent on Back of Hoodie -->
+        <line x1="548" y1="286" x2="548" y2="365" stroke="#7c3aed" stroke-width="2" stroke-opacity="0.45" />
+
+        <!-- Neck (Three-quarter rear view) -->
+        <rect x="534" y="224" width="32" height="28" rx="8" fill="#d99b78" />
+
+        <!-- Head (Three-quarter rear perspective, angled toward main monitor) -->
+        <!-- Subtle jawline/cheek visible on right side + right ear -->
+        <path d="M518 172 C518 150 584 150 586 178 C588 198 584 222 568 232 C552 238 524 232 518 206 Z" fill="#e0ac8b" />
+
+        <!-- Glasses Temple Arm & Subtle Cyan Lens Rim Glow (Right Side Profile) -->
+        <line x1="572" y1="192" x2="590" y2="188" stroke="#00f2fe" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M587 183 L592 188 L587 194" fill="none" stroke="#c4b5fd" stroke-width="1.8" stroke-linecap="round" />
+
+        <!-- Right Ear -->
+        <ellipse cx="576" cy="200" rx="6" ry="10" fill="#e0ac8b" stroke="#c68863" stroke-width="1.2" />
+
+        <!-- Modern Tapered Dark Hair (Distinctive geometric layered swoop at crown) -->
+        <path d="M512 204 C506 176 516 146 550 144 C578 142 596 156 594 174 C584 168 572 176 572 194 C570 198 566 208 564 214 C554 222 522 222 512 204 Z" fill="#101326" />
+        <!-- Hair Top Crown Spikes / Swoop -->
+        <path d="M532 146 L544 136 L556 144 L572 138 L578 148 L596 150 L588 162 Z" fill="#161b36" />
+        <!-- Monitor Rim Lighting on Hair Edges -->
+        <path d="M512 196 C509 174 519 150 546 144" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+        <path d="M562 142 C580 143 594 152 592 168" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" opacity="0.85" />
+      </g>
+
+      <!-- Ergonomic Gaming/Office Chair (Foreground Backrest framing the character) -->
+      <g>
+        <!-- Chair Outer Shell -->
+        <path d="M472 410 L460 322 C458 302 476 290 502 290 L594 290 C620 290 638 302 636 322 L624 410 Z" fill="url(#chair-back)" stroke="#2d3666" stroke-width="2" />
+        <!-- Chair Inner Cushion Panel & Purple Stitching -->
+        <path d="M488 410 L480 330 C479 314 492 306 510 306 L586 306 C604 306 617 314 616 330 L608 410 Z" fill="#12162e" stroke="#7c3aed" stroke-width="1.5" stroke-opacity="0.55" />
+        <!-- Chair Center Spine Accent -->
+        <rect x="542" y="318" width="12" height="92" rx="4" fill="#0b0e1d" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.4" />
+        <!-- Chair Armrests -->
+        <rect x="434" y="346" width="28" height="10" rx="4" fill="#1b2242" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.5" />
+        <rect x="634" y="346" width="28" height="10" rx="4" fill="#1b2242" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5" />
+      </g>
+    </g>
+
+    <!-- ========================================================= -->
+    <!-- FLOATING PIXEL PARTICLES & AMBIENT LIGHT MOTES (8S LOOP)  -->
+    <!-- ========================================================= -->
+    <g>
+      <!-- Particle 1 (Cyan Square near Left Monitor) -->
+      <rect x="336" y="160" width="5" height="5" rx="1" fill="#00f2fe" opacity="0.7">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-18; 0,0" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0.25;0.7" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Particle 2 (Lavender Square above Main Monitor) -->
+      <rect x="630" y="76" width="4" height="4" rx="1" fill="#c4b5fd" opacity="0.6">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-14; 0,0" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.85;0.3" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Particle 3 (Purple Pixel near Workstation PC) -->
+      <rect x="880" y="190" width="6" height="6" rx="1" fill="#a855f7" opacity="0.65">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-22; 0,0" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.65;0.2;0.65" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Particle 4 (Cyan Pixel Right Foreground) -->
+      <rect x="1065" y="235" width="5" height="5" rx="1" fill="#00f2fe" opacity="0.55">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-16; 0,0" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.25;0.75;0.25" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Particle 5 (Lavender Pixel Left of Character) -->
+      <rect x="424" y="268" width="4" height="4" rx="1" fill="#c4b5fd" opacity="0.6">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-15; 0,0" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.6;0.15;0.6" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Particle 6 (Cyan Pixel High Right) -->
+      <rect x="838" y="118" width="4" height="4" rx="1" fill="#00f2fe" opacity="0.75">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-12; 0,0" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="8s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Particle 7 (Subtle Floating Code Node Symbol) -->
+      <g opacity="0.45">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-14; 0,0" dur="8s" repeatCount="indefinite" />
+        <rect x="782" y="64" width="3" height="3" fill="#00f2fe" />
+        <rect x="788" y="64" width="8" height="3" fill="#a855f7" />
+      </g>
+    </g>
+
+    <!-- Corner HUD Tech Accents inside Card -->
+    <g stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.5">
+      <path d="M 30 38 L 30 24 L 44 24" />
+      <path d="M 1170 38 L 1170 24 L 1156 24" />
+      <path d="M 30 382 L 30 396 L 44 396" stroke="#a855f7" />
+      <path d="M 1170 382 L 1170 396 L 1156 396" stroke="#a855f7" />
+    </g>
+  </g>
+
+  <!-- Outer Rounded Card Border (Floating cleanly on transparent background) -->
+  <rect x="16" y="10" width="1168" height="400" rx="20" fill="none" stroke="url(#card-border)" stroke-width="2" />
+</svg>

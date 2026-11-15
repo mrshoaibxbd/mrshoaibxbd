@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 140" width="100%" height="140">
+  <defs>
+    <!-- Primary Violet-Purple Wave Gradient -->
+    <linearGradient id="purple-wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b0764" stop-opacity="0" />
+      <stop offset="15%" stop-color="#6d28d9" stop-opacity="0.45" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.85" />
+      <stop offset="85%" stop-color="#6d28d9" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#3b0764" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Secondary Deep Violet Gradient -->
+    <linearGradient id="violet-subtle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0" />
+      <stop offset="25%" stop-color="#7c3aed" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.5" />
+      <stop offset="75%" stop-color="#7c3aed" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Cyan Highlight Gradient -->
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0891b2" stop-opacity="0" />
+      <stop offset="20%" stop-color="#06b6d4" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.85" />
+      <stop offset="80%" stop-color="#06b6d4" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Circuit Trace Gradient -->
+    <linearGradient id="circuit-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0" />
+      <stop offset="30%" stop-color="#a855f7" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter for Nodes and Particles -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Motion Paths for Flowing Waves and Particles -->
+    <path id="wave-1" d="M -40,85 C 260,25 460,125 760,65 C 980,20 1100,95 1240,60" />
+    <path id="wave-2" d="M -40,55 C 220,120 520,20 820,90 C 1020,130 1120,45 1240,80" />
+    <path id="wave-3" d="M -40,105 C 300,60 600,130 900,50 C 1060,15 1150,75 1240,45" />
+    <path id="wave-4" d="M 1240,95 C 960,130 720,30 420,95 C 200,135 80,55 -40,75" />
+  </defs>
+
+  <!-- Subtle Background Grid Dots (Digital Landscape Horizon) -->
+  <g fill="#6d28d9" opacity="0.25">
+    <circle cx="150" cy="122" r="1" />
+    <circle cx="250" cy="128" r="1" />
+    <circle cx="350" cy="118" r="1" />
+    <circle cx="450" cy="126" r="1" />
+    <circle cx="550" cy="115" r="1" />
+    <circle cx="650" cy="125" r="1" />
+    <circle cx="750" cy="120" r="1" />
+    <circle cx="850" cy="128" r="1" />
+    <circle cx="950" cy="116" r="1" />
+    <circle cx="1050" cy="124" r="1" />
+  </g>
+
+  <!-- Secondary Circuitry Branches -->
+  <g fill="none" stroke="url(#circuit-grad)" stroke-width="0.85" stroke-linecap="round">
+    <path d="M 180,68 L 205,45 L 285,45" />
+    <path d="M 480,82 L 505,108 L 595,108" />
+    <path d="M 760,65 L 785,38 L 870,38" />
+    <path d="M 920,88 L 945,112 L 1030,112" />
+  </g>
+
+  <!-- Connecting Mesh Links -->
+  <g stroke="#7c3aed" stroke-width="0.6" opacity="0.22" stroke-dasharray="2 4">
+    <line x1="295" y1="68" x2="365" y2="75" />
+    <line x1="560" y1="84" x2="620" y2="62" />
+    <line x1="760" y1="65" x2="820" y2="90" />
+  </g>
+
+  <!-- Main Flowing Wave Network -->
+  <g fill="none" stroke-linecap="round">
+    <!-- Deep Background Waves -->
+    <use href="#wave-3" stroke="url(#violet-subtle)" stroke-width="1" />
+    <use href="#wave-4" stroke="url(#violet-subtle)" stroke-width="1.2" stroke-dasharray="6 10" />
+
+    <!-- Primary Purple Wave -->
+    <use href="#wave-1" stroke="url(#purple-wave)" stroke-width="1.8" />
+
+    <!-- Cyan Highlight Wave -->
+    <use href="#wave-2" stroke="url(#cyan-glow)" stroke-width="1.3" />
+  </g>
+
+  <!-- Flowing Energy Pulses Along Curves -->
+  <g fill="none" stroke-linecap="round">
+    <use href="#wave-1" stroke="#e9d5ff" stroke-width="2" stroke-dasharray="50 1300" stroke-dashoffset="1350" opacity="0.6" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" values="1350;0" dur="22s" repeatCount="indefinite" />
+    </use>
+    <use href="#wave-2" stroke="#22d3ee" stroke-width="1.6" stroke-dasharray="35 1300" stroke-dashoffset="0" opacity="0.65" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" values="0;1335" dur="26s" repeatCount="indefinite" />
+    </use>
+  </g>
+
+  <!-- Traveling Particles Along Wave 1 (Left to Right) -->
+  <g filter="url(#glow)">
+    <circle r="2.2" fill="#e9d5ff">
+      <animateMotion dur="28s" repeatCount="indefinite" begin="-4s">
+        <mpath href="#wave-1" />
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.1;0.9;1" dur="28s" repeatCount="indefinite" begin="-4s" />
+    </circle>
+    <circle r="1.6" fill="#22d3ee">
+      <animateMotion dur="28s" repeatCount="indefinite" begin="-18s">
+        <mpath href="#wave-1" />
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.1;0.9;1" dur="28s" repeatCount="indefinite" begin="-18s" />
+    </circle>
+
+    <!-- Traveling Particles Along Wave 2 (Left to Right) -->
+    <circle r="2" fill="#22d3ee">
+      <animateMotion dur="34s" repeatCount="indefinite" begin="-9s">
+        <mpath href="#wave-2" />
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.1;0.9;1" dur="34s" repeatCount="indefinite" begin="-9s" />
+    </circle>
+    <circle r="1.5" fill="#ddd6fe">
+      <animateMotion dur="34s" repeatCount="indefinite" begin="-25s">
+        <mpath href="#wave-2" />
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.75;0.75;0" keyTimes="0;0.1;0.9;1" dur="34s" repeatCount="indefinite" begin="-25s" />
+    </circle>
+
+    <!-- Traveling Particles Along Wave 3 (Left to Right) -->
+    <circle r="1.6" fill="#c4b5fd">
+      <animateMotion dur="40s" repeatCount="indefinite" begin="-14s">
+        <mpath href="#wave-3" />
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.1;0.9;1" dur="40s" repeatCount="indefinite" begin="-14s" />
+    </circle>
+
+    <!-- Traveling Particles Along Wave 4 (Right to Left) -->
+    <circle r="1.8" fill="#e9d5ff">
+      <animateMotion dur="32s" repeatCount="indefinite" begin="-7s">
+        <mpath href="#wave-4" />
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.9;1" dur="32s" repeatCount="indefinite" begin="-7s" />
+    </circle>
+    <circle r="1.4" fill="#22d3ee">
+      <animateMotion dur="32s" repeatCount="indefinite" begin="-23s">
+        <mpath href="#wave-4" />
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.75;0.75;0" keyTimes="0;0.1;0.9;1" dur="32s" repeatCount="indefinite" begin="-23s" />
+    </circle>
+  </g>
+
+  <!-- Circuit Branch Endpoint Nodes -->
+  <g fill="#c4b5fd" opacity="0.65">
+    <circle cx="205" cy="45" r="1.5" />
+    <circle cx="285" cy="45" r="2">
+      <animate attributeName="opacity" values="0.3;0.85;0.3" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="505" cy="108" r="1.5" />
+    <circle cx="595" cy="108" r="2" fill="#22d3ee">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="785" cy="38" r="1.5" />
+    <circle cx="870" cy="38" r="2" fill="#22d3ee">
+      <animate attributeName="opacity" values="0.35;0.9;0.35" dur="6.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="945" cy="112" r="1.5" />
+    <circle cx="1030" cy="112" r="2">
+      <animate attributeName="opacity" values="0.75;0.25;0.75" dur="9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Glowing Intersection Nodes along Main Waves -->
+  <g filter="url(#glow)">
+    <!-- Node 1: Left-Center Purple/Cyan Intersection -->
+    <circle cx="295" cy="68" r="2.6" fill="#22d3ee" opacity="0.75">
+      <animate attributeName="r" values="2.2;3.3;2.2" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;0.95;0.5" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="295" cy="68" r="6" fill="none" stroke="#22d3ee" stroke-width="0.6" opacity="0.3">
+      <animate attributeName="r" values="4.5;7.5;4.5" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="6s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 2: Mid-Left Violet Node -->
+    <circle cx="480" cy="82" r="2.2" fill="#e9d5ff" opacity="0.7">
+      <animate attributeName="r" values="2.6;1.8;2.6" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.85;0.4;0.85" dur="8s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 3: Center Hub Node -->
+    <circle cx="620" cy="62" r="2.8" fill="#a855f7" opacity="0.8">
+      <animate attributeName="r" values="2.4;3.6;2.4" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.55;0.95;0.55" dur="7.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="620" cy="62" r="6.5" fill="none" stroke="#c4b5fd" stroke-width="0.6" opacity="0.25">
+      <animate attributeName="r" values="5;8.5;5" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.35;0.08;0.35" dur="7.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 4: Mid-Right Cyan Node -->
+    <circle cx="760" cy="65" r="2.5" fill="#22d3ee" opacity="0.8">
+      <animate attributeName="r" values="3.1;2.1;3.1" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.9;0.45;0.9" dur="6.8s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 5: Right Violet Node -->
+    <circle cx="980" cy="62" r="2.2" fill="#e9d5ff" opacity="0.65">
+      <animate attributeName="r" values="1.9;2.9;1.9" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.45;0.85;0.45" dur="7.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Subtle Geometric Lavender Particles (Diamonds & Micro-Dots) -->
+  <g>
+    <!-- Floating Diamond 1 -->
+    <polygon points="160,32 163,35 160,38 157,35" fill="#ddd6fe" opacity="0.45">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;0.65;0.3" dur="9s" repeatCount="indefinite" />
+    </polygon>
+
+    <!-- Floating Diamond 2 -->
+    <polygon points="415,28 418,31 415,34 412,31" fill="#22d3ee" opacity="0.4">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,4; 0,0" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.55;0.2;0.55" dur="11s" repeatCount="indefinite" />
+    </polygon>
+
+    <!-- Floating Diamond 3 -->
+    <polygon points="685,105 688,108 685,111 682,108" fill="#ddd6fe" opacity="0.5">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="8.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.25;0.6;0.25" dur="8.5s" repeatCount="indefinite" />
+    </polygon>
+
+    <!-- Floating Diamond 4 -->
+    <polygon points="895,24 898,27 895,30 892,27" fill="#c4b5fd" opacity="0.45">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,5; 0,0" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.25;0.6" dur="10s" repeatCount="indefinite" />
+    </polygon>
+
+    <!-- Floating Diamond 5 -->
+    <polygon points="1080,88 1083,91 1080,94 1077,91" fill="#22d3ee" opacity="0.35">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="9.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.25;0.55;0.25" dur="9.5s" repeatCount="indefinite" />
+    </polygon>
+
+    <!-- Ambient Lavender Micro-Particles -->
+    <circle cx="115" cy="92" r="1.2" fill="#e9d5ff" opacity="0.35">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="345" cy="108" r="1" fill="#c4b5fd" opacity="0.4">
+      <animate attributeName="opacity" values="0.5;0.15;0.5" dur="8.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="545" cy="36" r="1.3" fill="#e9d5ff" opacity="0.45">
+      <animate attributeName="opacity" values="0.25;0.7;0.25" dur="6.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="725" cy="25" r="1.1" fill="#22d3ee" opacity="0.35">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="835" cy="106" r="1.2" fill="#ddd6fe" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.55;0.2" dur="7.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1045" cy="42" r="1.3" fill="#e9d5ff" opacity="0.35">
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="8.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

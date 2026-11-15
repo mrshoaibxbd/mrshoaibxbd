@@ -1,0 +1,358 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" fill="none">
+  <defs>
+    <!-- Surface & Node Gradients -->
+    <linearGradient id="nodeSurface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#11182d" stop-opacity="0.94"/>
+      <stop offset="55%" stop-color="#0b1021" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#171332" stop-opacity="0.94"/>
+    </linearGradient>
+
+    <linearGradient id="ringCyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="ringPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="ringLavender" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#c4b5fd" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#e879f9"/>
+    </linearGradient>
+
+    <linearGradient id="arcGrad1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="arcGrad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="returnArcGrad" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <radialGradient id="ambientCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="ambientPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="ambientLav" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c4b5fd" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft Glow Filters -->
+    <filter id="glowCyan" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowPurple" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="cardShadow" x="-12%" y="-12%" width="124%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#040711" flood-opacity="0.75"/>
+    </filter>
+
+    <!-- Motion Paths for Continuous 6s Cycle -->
+    <!-- Path 1: LEARN to BUILD (Upper Curved Arrow) -->
+    <path id="pathLearnToBuild" d="M 244 96 C 296 50, 348 50, 400 96"/>
+    <!-- Path 2: BUILD to IMPROVE (Upper Curved Arrow) -->
+    <path id="pathBuildToImprove" d="M 500 96 C 552 50, 604 50, 656 96"/>
+    <!-- Path 3: IMPROVE back to LEARN (Lower Continuous Feedback Arc) -->
+    <path id="pathImproveToLearn" d="M 664 142 C 550 228, 350 228, 236 142"/>
+  </defs>
+
+  <style>
+    .label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Oxygen, Ubuntu, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3.2px;
+      fill: #e2e8f0;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- ==================== AMBIENT BACKDROP GLOWS ==================== -->
+  <ellipse cx="190" cy="115" rx="135" ry="95" fill="url(#ambientCyan)"/>
+  <ellipse cx="450" cy="115" rx="135" ry="95" fill="url(#ambientPurple)"/>
+  <ellipse cx="710" cy="115" rx="135" ry="95" fill="url(#ambientLav)"/>
+
+  <!-- Subtle Horizontal Axis & Geometric Grid Accents -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.55">
+    <line x1="65" y1="115" x2="118" y2="115" stroke-dasharray="3 4"/>
+    <line x1="782" y1="115" x2="835" y2="115" stroke-dasharray="3 4"/>
+    <circle cx="65" cy="115" r="2" fill="#38bdf8"/>
+    <circle cx="835" cy="115" r="2" fill="#c084fc"/>
+  </g>
+
+  <!-- ==================== FLOWING CURVED ARROWS ==================== -->
+
+  <!-- 1. Curved Arrow: LEARN -> BUILD -->
+  <g>
+    <!-- Soft outer track -->
+    <path d="M 244 96 C 296 50, 348 50, 400 96" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Main gradient curve -->
+    <path d="M 244 96 C 296 50, 348 50, 400 96" stroke="url(#arcGrad1)" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Animated dashed energy flow -->
+    <path d="M 244 96 C 296 50, 348 50, 400 96" stroke="#00f2fe" stroke-width="1.6" stroke-dasharray="5 9" stroke-linecap="round" opacity="0.75">
+      <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    <!-- Arrowhead at BUILD entry (400, 96) angled along tangent (~41 deg) -->
+    <path d="M 390 95 L 402 98 L 397 86" fill="none" stroke="#c084fc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Origin port dot -->
+    <circle cx="244" cy="96" r="3" fill="#0b1021" stroke="#00f2fe" stroke-width="1.6"/>
+  </g>
+
+  <!-- 2. Curved Arrow: BUILD -> IMPROVE -->
+  <g>
+    <!-- Soft outer track -->
+    <path d="M 500 96 C 552 50, 604 50, 656 96" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Main gradient curve -->
+    <path d="M 500 96 C 552 50, 604 50, 656 96" stroke="url(#arcGrad2)" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Animated dashed energy flow -->
+    <path d="M 500 96 C 552 50, 604 50, 656 96" stroke="#c4b5fd" stroke-width="1.6" stroke-dasharray="5 9" stroke-linecap="round" opacity="0.75">
+      <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    <!-- Arrowhead at IMPROVE entry (656, 96) -->
+    <path d="M 646 95 L 658 98 L 653 86" fill="none" stroke="#00f2fe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Origin port dot -->
+    <circle cx="500" cy="96" r="3" fill="#0b1021" stroke="#c084fc" stroke-width="1.6"/>
+  </g>
+
+  <!-- 3. Continuous Loop Feedback Arc: IMPROVE -> LEARN (Subtle lower return curve) -->
+  <g>
+    <path d="M 664 142 C 550 228, 350 228, 236 142" stroke="url(#returnArcGrad)" stroke-width="1.5" stroke-dasharray="4 6" stroke-linecap="round">
+      <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- Subtle return arrowhead near LEARN (236, 142) -->
+    <path d="M 246 143 L 234 140 L 239 151" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <circle cx="664" cy="142" r="2.5" fill="#0b1021" stroke="#38bdf8" stroke-width="1.3" opacity="0.75"/>
+  </g>
+
+  <!-- ==================== STAGE 1: LEARN (x=190, y=115) ==================== -->
+  <g transform="translate(190, 115)">
+    <!-- Outer Sequential Illumination Halo (Peaks at 0s - 2s of 6s cycle) -->
+    <circle cx="0" cy="0" r="62" fill="none" stroke="#00f2fe" stroke-width="2" filter="url(#glowCyan)" opacity="0.85">
+      <animate attributeName="opacity" values="0.95;0.2;0.15;0.95" keyTimes="0;0.33;0.85;1" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="61;57;57;61" keyTimes="0;0.33;0.85;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Rotating Technical Orbit Ring -->
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="14 8 4 8" opacity="0.45">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Hexagonal / Circular Futuristic Pedestal -->
+    <circle cx="0" cy="0" r="49" fill="url(#nodeSurface)" stroke="url(#ringCyan)" stroke-width="1.8" filter="url(#cardShadow)"/>
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#1e293b" stroke-width="0.9"/>
+
+    <!-- LEARN Icon: Illuminated Open Book + Floating Knowledge Nodes -->
+    <g>
+      <animate attributeName="opacity" values="1;0.65;0.65;1" keyTimes="0;0.33;0.85;1" dur="6s" repeatCount="indefinite"/>
+
+      <!-- Radiant Knowledge Rays above Book -->
+      <line x1="0" y1="-8" x2="0" y2="-26" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+      <line x1="-6" y1="-7" x2="-15" y2="-21" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+      <line x1="6" y1="-7" x2="15" y2="-21" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+
+      <!-- Floating Knowledge Nodes (Constellation) -->
+      <circle cx="0" cy="-26" r="3" fill="#00f2fe" filter="url(#glowCyan)">
+        <animate attributeName="r" values="3.4;2.2;3.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-15" cy="-21" r="2.3" fill="#c4b5fd"/>
+      <circle cx="15" cy="-21" r="2.3" fill="#c4b5fd"/>
+      <path d="M -15 -21 L 0 -26 L 15 -21" stroke="#38bdf8" stroke-width="0.9" stroke-opacity="0.6"/>
+
+      <!-- Left Book Page (Isometric Wing) -->
+      <path d="M 0 -4 C -8 -9, -19 -9, -26 -5 L -26 15 C -19 11, -8 11, 0 16 Z" fill="#13203d" stroke="#00f2fe" stroke-width="1.7" stroke-linejoin="round"/>
+      <!-- Right Book Page (Isometric Wing) -->
+      <path d="M 0 -4 C 8 -9, 19 -9, 26 -5 L 26 15 C 19 11, 8 11, 0 16 Z" fill="#191736" stroke="#c4b5fd" stroke-width="1.7" stroke-linejoin="round"/>
+
+      <!-- Book Page Lines -->
+      <path d="M -6 0 C -11 -3, -16 -3, -20 -1" stroke="#38bdf8" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M -6 6 C -11 3, -16 3, -20 5" stroke="#38bdf8" stroke-width="1.2" stroke-linecap="round" opacity="0.75"/>
+      <path d="M 6 0 C 11 -3, 16 -3, 20 -1" stroke="#c084fc" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M 6 6 C 11 3, 16 3, 20 5" stroke="#c084fc" stroke-width="1.2" stroke-linecap="round" opacity="0.75"/>
+
+      <!-- Center Spine & Lower Accent Cradles -->
+      <line x1="0" y1="-4" x2="0" y2="17" stroke="#00f2fe" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M -22 20 C -12 16, -5 17, 0 21 C 5 17, 12 16, 22 20" stroke="#818cf8" stroke-width="1.3" stroke-linecap="round" opacity="0.7"/>
+    </g>
+
+    <!-- Stage Label -->
+    <text x="0" y="84" class="label">
+      LEARN
+      <animate attributeName="fill" values="#00f2fe;#cbd5e1;#cbd5e1;#00f2fe" keyTimes="0;0.33;0.85;1" dur="6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- ==================== STAGE 2: BUILD (x=450, y=115) ==================== -->
+  <g transform="translate(450, 115)">
+    <!-- Outer Sequential Illumination Halo (Peaks at 2s - 4s of 6s cycle) -->
+    <circle cx="0" cy="0" r="57" fill="none" stroke="#c084fc" stroke-width="2" filter="url(#glowPurple)" opacity="0.25">
+      <animate attributeName="opacity" values="0.2;0.95;0.2;0.2" keyTimes="0;0.35;0.68;1" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="57;61;57;57" keyTimes="0;0.35;0.68;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Counter-Rotating Technical Orbit Ring -->
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#c084fc" stroke-width="1" stroke-dasharray="14 8 4 8" opacity="0.45">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="24s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Node Pedestal -->
+    <circle cx="0" cy="0" r="49" fill="url(#nodeSurface)" stroke="url(#ringPurple)" stroke-width="1.8" filter="url(#cardShadow)"/>
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#1e293b" stroke-width="0.9"/>
+
+    <!-- BUILD Icon: Development Window + Geometric Code Brackets `</>` -->
+    <g>
+      <animate attributeName="opacity" values="0.7;1;0.7;0.7" keyTimes="0;0.35;0.68;1" dur="6s" repeatCount="indefinite"/>
+
+      <!-- Mini Dev Window Frame -->
+      <rect x="-27" y="-22" width="54" height="44" rx="6" fill="#0c1224" stroke="#a855f7" stroke-width="1.6"/>
+      <line x1="-27" y1="-11" x2="27" y2="-11" stroke="#334155" stroke-width="1.1"/>
+
+      <!-- Window Header Dots -->
+      <circle cx="-19" cy="-16.5" r="1.8" fill="#00f2fe"/>
+      <circle cx="-13" cy="-16.5" r="1.8" fill="#c084fc"/>
+      <circle cx="-7" cy="-16.5" r="1.8" fill="#64748b"/>
+
+      <!-- Code Bracket Left `<` -->
+      <path d="M -9 -2 L -17 5.5 L -9 13" stroke="#00f2fe" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Code Slash `/` -->
+      <line x1="3" y1="-4" x2="-3" y2="15" stroke="#c4b5fd" stroke-width="1.9" stroke-linecap="round"/>
+      <!-- Code Bracket Right `>` -->
+      <path d="M 9 -2 L 17 5.5 L 9 13" stroke="#c084fc" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Stage Label -->
+    <text x="0" y="84" class="label">
+      BUILD
+      <animate attributeName="fill" values="#cbd5e1;#c4b5fd;#cbd5e1;#cbd5e1" keyTimes="0;0.35;0.68;1" dur="6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- ==================== STAGE 3: IMPROVE (x=710, y=115) ==================== -->
+  <g transform="translate(710, 115)">
+    <!-- Outer Sequential Illumination Halo (Peaks at 4s - 6s of 6s cycle) -->
+    <circle cx="0" cy="0" r="57" fill="none" stroke="#00f2fe" stroke-width="2" filter="url(#glowCyan)" opacity="0.25">
+      <animate attributeName="opacity" values="0.2;0.2;0.95;0.2" keyTimes="0;0.35;0.7;1" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="57;57;61;57" keyTimes="0;0.35;0.7;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Rotating Technical Orbit Ring -->
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#c4b5fd" stroke-width="1" stroke-dasharray="14 8 4 8" opacity="0.45">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Node Pedestal -->
+    <circle cx="0" cy="0" r="49" fill="url(#nodeSurface)" stroke="url(#ringLavender)" stroke-width="1.8" filter="url(#cardShadow)"/>
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#1e293b" stroke-width="0.9"/>
+
+    <!-- IMPROVE Icon: Upward-Moving Growth Graph & Telemetry Bars -->
+    <g>
+      <animate attributeName="opacity" values="0.7;0.7;1;0.7" keyTimes="0;0.35;0.7;1" dur="6s" repeatCount="indefinite"/>
+
+      <!-- Subtle Grid Baseline -->
+      <line x1="-24" y1="18" x2="24" y2="18" stroke="#334155" stroke-width="1.4" stroke-linecap="round"/>
+
+      <!-- Ascending Bar Columns -->
+      <rect x="-20" y="8" width="6" height="10" rx="1.5" fill="#38bdf8" opacity="0.55"/>
+      <rect x="-9" y="1" width="6" height="17" rx="1.5" fill="#818cf8" opacity="0.7"/>
+      <rect x="2" y="-6" width="6" height="24" rx="1.5" fill="#c084fc" opacity="0.85"/>
+      <rect x="13" y="-14" width="6" height="32" rx="1.5" fill="#00f2fe" opacity="0.95"/>
+
+      <!-- Area Glow Under Trendline -->
+      <path d="M -20 4 L -6 -5 L 5 -2 L 20 -20 L 20 18 L -20 18 Z" fill="url(#chartFill)"/>
+
+      <!-- Upward Trajectory Line & Arrowhead -->
+      <path d="M -20 4 L -6 -5 L 5 -2 L 20 -20" stroke="#00f2fe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowCyan)"/>
+      <path d="M 12 -20 L 20 -20 L 20 -12" stroke="#00f2fe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Data Vertices -->
+      <circle cx="-20" cy="4" r="2.2" fill="#0b1021" stroke="#38bdf8" stroke-width="1.5"/>
+      <circle cx="-6" cy="-5" r="2.2" fill="#0b1021" stroke="#c4b5fd" stroke-width="1.5"/>
+      <circle cx="5" cy="-2" r="2.2" fill="#0b1021" stroke="#c084fc" stroke-width="1.5"/>
+      <circle cx="20" cy="-20" r="2.8" fill="#00f2fe" filter="url(#glowCyan)"/>
+    </g>
+
+    <!-- Stage Label -->
+    <text x="0" y="84" class="label">
+      IMPROVE
+      <animate attributeName="fill" values="#cbd5e1;#cbd5e1;#00f2fe;#cbd5e1" keyTimes="0;0.35;0.7;1" dur="6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- ==================== TRAVELING GLOWING PARTICLES ==================== -->
+
+  <!-- Particle 1: Travels from LEARN to BUILD (Active during 0.2s - 2.1s of 6s cycle) -->
+  <g>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.30;0.35;1" dur="6s" repeatCount="indefinite"/>
+    <circle r="6" fill="#00f2fe" opacity="0.35" filter="url(#glowCyan)">
+      <animateMotion dur="6s" keyPoints="0;0;1;1" keyTimes="0;0.04;0.34;1" calcMode="linear" repeatCount="indefinite">
+        <mpath href="#pathLearnToBuild"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.2" fill="#e0f2fe" filter="url(#glowCyan)">
+      <animateMotion dur="6s" keyPoints="0;0;1;1" keyTimes="0;0.04;0.34;1" calcMode="linear" repeatCount="indefinite">
+        <mpath href="#pathLearnToBuild"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <!-- Particle 2: Travels from BUILD to IMPROVE (Active during 2.2s - 4.1s of 6s cycle) -->
+  <g>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.36;0.40;0.65;0.70;1" dur="6s" repeatCount="indefinite"/>
+    <circle r="6" fill="#c084fc" opacity="0.35" filter="url(#glowPurple)">
+      <animateMotion dur="6s" keyPoints="0;0;1;1" keyTimes="0;0.37;0.68;1" calcMode="linear" repeatCount="indefinite">
+        <mpath href="#pathBuildToImprove"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.2" fill="#f3e8ff" filter="url(#glowPurple)">
+      <animateMotion dur="6s" keyPoints="0;0;1;1" keyTimes="0;0.37;0.68;1" calcMode="linear" repeatCount="indefinite">
+        <mpath href="#pathBuildToImprove"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <!-- Particle 3: Completes the Loop from IMPROVE back to LEARN (Active during 4.2s - 6.0s) -->
+  <g>
+    <animate attributeName="opacity" values="0;0;0.85;0.85;0" keyTimes="0;0.70;0.74;0.96;1" dur="6s" repeatCount="indefinite"/>
+    <circle r="2.6" fill="#38bdf8" filter="url(#glowCyan)">
+      <animateMotion dur="6s" keyPoints="0;0;1" keyTimes="0;0.70;1" calcMode="linear" repeatCount="indefinite">
+        <mpath href="#pathImproveToLearn"/>
+      </animateMotion>
+    </circle>
+  </g>
+</svg>
